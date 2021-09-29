@@ -1,0 +1,67 @@
+{
+
+  "anamnesis_at_home_flow" :[
+    {
+      "id": 123,
+      "name": "ggtrerth",
+      "link": "https://localhost:3000/flow1",
+      "notification_email": "info@dr-gallenbach.de",
+      "default": 0,
+      "display_email": "info@dr-gallenbach.de",
+      "display_phone": "",
+      "Vorlagen": [
+        {
+          "id": "5",
+          "SortIndex": 0,
+          "templates": "Anamnesis sheet"
+        },
+        {
+          "id": "6",
+          "SortIndex": 1,
+          "templates": "special health questions regarding COVID-19"
+        },
+        {
+          "id": "7",
+          "SortIndex": 2,
+          "templates": "patient information on data protection"
+        },
+        {
+          "id": "8",
+          "SortIndex": 3,
+          "templates": "data protection declaration of consent"
+        }
+      ]
+    },
+    {
+      "id": 456,
+      "name": "ggtrerth",
+      "link": "https://localhost:3000/flow2",
+      "notification_email": "info@dr-gallenbach.de",
+      "default": 1,
+      "display_email": "info@dr-gallenbach.de",
+      "display_phone": "",
+      "Vorlagen": [
+        {
+          "id": "1",
+          "SortIndex": 0,
+          "templates": "Anamnesis sheet"
+        },
+        {
+          "id": "2",
+          "SortIndex": 1,
+          "templates": "special health questions regarding COVID-19"
+        },
+        {
+          "id": "3",
+          "SortIndex": 2,
+          "templates": "patient information on data protection"
+        },
+        {
+          "id": "4",
+          "SortIndex": 3,
+          "templates": "data protection declaration of consent"
+        }
+      ]
+    }
+  ]
+}

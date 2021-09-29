@@ -1,0 +1,31 @@
+
+{
+  "document_template": {
+    "id": 12368,
+    "template_category_id": 1,
+    "title": "Beratung mit leerer Seite zum Bemalen",
+    "label": "Beratung mit leerer Seite zum Bemalen",
+    "atn_v2": "[{\"id\":\"id_04b6c653_565d_4928_a0fa_fd0773e2e66b\",\"type\":\"image\",\"source\":\"{{praxis_logo}}\",\"sizes\":{},\"style\":{\"align\":\"center\",\"size\":\"original\"}},{\"id\":\"id_d9986334_601a_4533_b40f_63cae409bdf5\",\"type\":\"heading\",\"content\":{\"de\":\"Beratung mit leerer Seite zum Bemalen\"},\"style\":{\"headingSize\":1,\"align\":\"center\"}},{\"id\":\"id_eadcc92e_7e28_4a08_b3cf_b605a4a2ee1b\",\"type\":\"paragraph\",\"content\":{\"de\":\"\u003cp\u003e{{patient_anrede}} {{patient_name}}\u003cbr /\u003e{{patient_anschrift}}\u003cbr /\u003e{{patient_geburtsdatum}}\u003c/p\u003e\"},\"style\":{\"align\":\"left\"}},{\"id\":\"id_56fd78b0_a1e6_48b0_bf6b_10c290c8eefb\",\"type\":\"heading\",\"content\":{\"de\":\"(zum Zeichnen bitte doppelt in den leeren Bereich tippen)\"},\"style\":{\"headingSize\":5,\"align\":\"center\"}},{\"id\":\"id_b241e6f3_6b3a_4477_9c61_0417b895ebf7\",\"type\":\"image\",\"source\":\"https://s3.eu-central-1.amazonaws.com/adento-dashboard/documents/consent-forms/images/leere-seite.png\",\"style\":{\"align\":\"center\",\"size\":\"m\"}},{\"id\":\"id_3dbe7ed2_fb57_49c4_87ac_0a6f48c33907\",\"type\":\"textInput\",\"required\":false,\"label\":{\"de\":\"Anmerkungen\"},\"placeholder\":{\"de\":\"\"},\"errorMessage\":{\"de\":\"Bitte füllen Sie aus\"},\"style\":{\"position\":\"left\",\"size\":\"l\"},\"allowCameraInput\":false},{\"id\":\"id_0ece48a2_dbfa_4807_a388_6aa9f9aff1df\",\"type\":\"paragraph\",\"content\":{\"de\":\"\u003cp\u003e{{praxis_stadt}}, {{datum_heute}}\u003c/p\u003e\"},\"style\":{\"align\":\"left\"}},{\"id\":\"id_55b37da2_063e_4f53_94da_b4991c93d9e1\",\"type\":\"group\",\"children\":[{\"id\":\"id_42562a75_121b_464e_94e9_d4e8b862c125\",\"type\":\"signature\",\"required\":false,\"infoLabel\":{\"de\":\"Hier klicken zum Unterschreiben.\",\"en\":\"Click here to sign.\",\"fr\":\"Cliquez ici pour signer.\",\"es\":\"Haga clic aquí para firmar.\",\"tr\":\"İmzalamak için buraya tıklayın.\",\"pl\":\"Kliknij tutaj, aby podpisać.\",\"ru\":\"Нажмите здесь, чтобы подписать.\",\"ch\":\"点击这里签名.\",\"ja\":\"署名するにはここをクリック.\",\"ar\":\"انقر هنا للتوقيع\"},\"errorMessage\":{\"de\":\"Bitte unterschreiben Sie\"},\"caption\":{\"de\":\"{{patient_name}} / Betreuer / Bevollmächtigter\"},\"style\":{\"align\":\"left\"}},{\"id\":\"id_21cb56c9_7fbf_4cff_b5e5_01dda550de95\",\"type\":\"signature\",\"required\":false,\"infoLabel\":{\"de\":\"Hier klicken zum Unterschreiben.\",\"en\":\"Click here to sign.\",\"fr\":\"Cliquez ici pour signer.\",\"es\":\"Haga clic aquí para firmar.\",\"tr\":\"İmzalamak için buraya tıklayın.\",\"pl\":\"Kliknij tutaj, aby podpisać.\",\"ru\":\"Нажмите здесь, чтобы подписать.\",\"ch\":\"点击这里签名.\",\"ja\":\"署名するにはここをクリック.\",\"ar\":\"انقر هنا للتوقيع\"},\"errorMessage\":{\"de\":\"Bitte unterschreiben Sie\"},\"caption\":{\"de\":\"Zahnarzt / Zahnärztin\"},\"style\":{\"align\":\"left\"}},{\"id\":\"id_2b55419f_7ea4_45b6_9c1b_84e0136a3e7a\",\"type\":\"signature\",\"required\":false,\"infoLabel\":{\"de\":\"Hier klicken zum Unterschreiben.\",\"en\":\"Click here to sign.\",\"fr\":\"Cliquez ici pour signer.\",\"es\":\"Haga clic aquí para firmar.\",\"tr\":\"İmzalamak için buraya tıklayın.\",\"pl\":\"Kliknij tutaj, aby podpisać.\",\"ru\":\"Нажмите здесь, чтобы подписать.\",\"ch\":\"点击这里签名.\",\"ja\":\"署名するにはここをクリック.\",\"ar\":\"انقر هنا للتوقيع\"},\"errorMessage\":{\"de\":\"Bitte unterschreiben Sie\"},\"caption\":{\"de\":\"Assistenz\"},\"style\":{\"align\":\"left\"}}]},{\"id\":\"id_0e363ffe_e4e9_4175_8ec5_32f915594bdf\",\"type\":\"spacer\",\"style\":{\"size\":\"m\"}}]",
+    "language": "de",
+    "languages": "[\"de\"]",
+    "created_at": "2018-03-07T10:57:51+01:00",
+    "updated_at": "2021-04-17T13:42:30+02:00",
+    "default": true
+  },
+    "practice": {
+        "id": 1812,
+        "name": "Zahnarztpraxis Dr. Sven Markus Gallenbach",
+        "address1": "Friedrichstraße 25",
+        "address2": "",
+        "zip_code": "69412",
+        "city": "Eberbach",
+        "email": "info@dr-gallenbach.de",
+        "phone": "+49 6271 1040",
+        "logo_url": null,
+        "website": "https://www.gallenbach-zaehne.de/",
+        "dgsvo_data_protection_officer_address": "",
+        "dgsvo_data_protection_officer_contact": "",
+        "dgsvo_data_protection_officer_name": "",
+        "dgsvo_factoring_provider": ""
+    }
+}

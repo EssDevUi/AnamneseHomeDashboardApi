@@ -1,0 +1,308 @@
+{
+  "recordsTotal": 94,
+  "recordsFiltered": 94,
+  "data": [
+    {
+      "id": "95",
+      "patient_name": "Alexander Tagelski",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 15:35:21",
+      "path_to_pdf": "f80cb82e-5032-4501-9f3c-0562ef572f48_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Jasenev Alexei"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "Pollenallergie"
+        }
+      ],
+      "DT_RowId": "95"
+    },
+    {
+      "id": "94",
+      "patient_name": "Ilva Weber",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 14:24:32",
+      "path_to_pdf": "81263767-011c-4ed4-bc2b-dcc6e59c86f5_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Mieck"
+        },
+        {
+          "risiko": "Privatversichert"
+        }
+      ],
+      "DT_RowId": "94"
+    },
+    {
+      "id": "93",
+      "patient_name": "Ilona Helm",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 14:10:23",
+      "path_to_pdf": "bb53ef41-2919-4db1-861b-ee004b7bec02_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Herz-Kreislauf-Erkrankung"
+        },
+        {
+          "risiko": "Blutdruckprobleme zu hoch"
+        },
+        {
+          "risiko": "Herzmedikamente"
+        }
+      ],
+      "DT_RowId": "93"
+    },
+    {
+      "id": "92",
+      "patient_name": "Vitalij Rott",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 14:08:45",
+      "path_to_pdf": "04c408f8-c684-4b3d-b662-5d3c84191eb7_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Zubowskij"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "freiwillig versichert"
+        },
+        {
+          "risiko": "Raucher - Zigaretten am Tag: 12"
+        },
+        {
+          "risiko": "Blutdruckprobleme zu hoch"
+        },
+        {
+          "risiko": "Herzmedikamente"
+        }
+      ],
+      "DT_RowId": "92"
+    },
+    {
+      "id": "91",
+      "patient_name": "Walter Throm",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 12:07:38",
+      "path_to_pdf": "e25581e3-466b-4b27-8901-3d1be96f31fe_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Dr schmitt"
+        },
+        {
+          "risiko": "Anschrift Hausarzt: Obrigheim"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Raucher - Zigaretten am Tag: 8"
+        },
+        {
+          "risiko": "Blutdruckprobleme zu hoch"
+        },
+        {
+          "risiko": "Cortison"
+        },
+        {
+          "risiko": "Andere Medikamente"
+        },
+        {
+          "risiko": "Medikamenteneinnahme: Leflunomld"
+        }
+      ],
+      "DT_RowId": "91"
+    },
+    {
+      "id": "90",
+      "patient_name": "Mustafa Sucu",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 09:14:27",
+      "path_to_pdf": "705b7487-de87-420c-9352-244986f89f1f_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Dr Winter"
+        },
+        {
+          "risiko": "Anschrift Hausarzt: Gartenstr 2"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Diabetes Typ 2"
+        },
+        {
+          "risiko": "Herz-Kreislauf-Erkrankung"
+        },
+        {
+          "risiko": "Herzklappenfehler/-ersatz"
+        },
+        {
+          "risiko": "Anmerkungen Herzklappenfehler/-ersatz: Stent"
+        },
+        {
+          "risiko": "Nierenerkrankungen"
+        },
+        {
+          "risiko": "Anmerkungen Nierenerkrankungen: Nierenstein"
+        },
+        {
+          "risiko": "blutverdünnende Medikamente"
+        }
+      ],
+      "DT_RowId": "90"
+    },
+    {
+      "id": "89",
+      "patient_name": "Marlena Adamiok",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "25.06.21 09:02:38",
+      "path_to_pdf": "8f44db1c-6cc1-4071-8660-9e360776879f_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Dr.Körting"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Metallallergie"
+        },
+        {
+          "risiko": "Blutdruckprobleme zu niedrig"
+        }
+      ],
+      "DT_RowId": "89"
+    },
+    {
+      "id": "88",
+      "patient_name": "Gertrud Straub",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "24.06.21 15:39:47",
+      "path_to_pdf": "195c0952-fb45-4c0a-a9f0-a54d71eb9521_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Dr. hack"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Blutdruckprobleme zu hoch"
+        },
+        {
+          "risiko": "Herzmedikamente"
+        }
+      ],
+      "DT_RowId": "88"
+    },
+    {
+      "id": "87",
+      "patient_name": "Karl Straub",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "24.06.21 15:21:25",
+      "path_to_pdf": "045bc30e-99eb-4cbe-a372-3854a3ae6f20_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Dr. hack"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Blutgerinnungsstörung"
+        },
+        {
+          "risiko": "Blutdruckprobleme zu hoch"
+        },
+        {
+          "risiko": "Osteoporose"
+        },
+        {
+          "risiko": "blutverdünnende Medikamente"
+        }
+      ],
+      "DT_RowId": "87"
+    },
+    {
+      "id": "86",
+      "patient_name": "Ruhi Duman",
+      "title": "Anamnesebogen Erwachsene",
+      "type": "Anamnesebogen",
+      "timestamp": "24.06.21 12:28:28",
+      "path_to_pdf": "88a21991-82b9-4d2b-a809-fc00f1a9f5af_signed.pdf",
+      "anamnesis_report": [
+        {
+          "risiko": "Name Hausarzt: Dr med stefn"
+        },
+        {
+          "risiko": "Telefon Hausarzt: 06271 2466"
+        },
+        {
+          "risiko": "Anschrift Hausarzt: Gartenstraße 1, 69412 Eberbach"
+        },
+        {
+          "risiko": "Gesetzlichversichert"
+        },
+        {
+          "risiko": "pflichtversichert"
+        },
+        {
+          "risiko": "Raucher - Zigaretten am Tag: 4-5"
+        },
+        {
+          "risiko": "Andere Allergien:: Katzen haaren"
+        },
+        {
+          "risiko": "Atemwegserkrankung"
+        },
+        {
+          "risiko": "Anmerkungen Atemwegserkrankung: Bronchitis"
+        },
+        {
+          "risiko": "Andere Medikamente"
+        },
+        {
+          "risiko": "Medikamenteneinnahme: Salbutamol"
+        }
+      ],
+      "DT_RowId": "86"
+    }
+  ]
+}

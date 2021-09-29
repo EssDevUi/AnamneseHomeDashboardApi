@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210918074700_update tblpractice1.cs" />
+    <Compile Remove="Migrations\20210918074700_update tblpractice1.Designer.cs" />
+    <Compile Remove="Migrations\20210927094725_create table Vorlagen.cs" />
+    <Compile Remove="Migrations\20210927094725_create table Vorlagen.Designer.cs" />
+    <Compile Remove="Migrations\20210927094905_create table Vorlagen.cs" />
+    <Compile Remove="Migrations\20210927094905_create table Vorlagen.Designer.cs" />
+    <Compile Remove="Migrations\20210928095228_Update table anamnesis_at_home_flowID.cs" />
+    <Compile Remove="Migrations\20210928095228_Update table anamnesis_at_home_flowID.Designer.cs" />
+    <Compile Remove="Migrations\20210928100053_Update table anamnesis_at_home_flow.cs" />
+    <Compile Remove="Migrations\20210928100053_Update table anamnesis_at_home_flow.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EFCore.BulkExtensions" Version="3.6.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

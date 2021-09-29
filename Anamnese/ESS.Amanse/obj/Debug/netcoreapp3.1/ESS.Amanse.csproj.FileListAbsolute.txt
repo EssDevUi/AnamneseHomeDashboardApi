@@ -1,0 +1,47 @@
+C:\Users\esszi\source\repos\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.deps.json
+C:\Users\esszi\source\repos\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.json
+C:\Users\esszi\source\repos\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
+C:\Users\esszi\source\repos\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
+C:\Users\esszi\source\repos\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
+C:\Users\esszi\source\repos\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csprojAssemblyReference.cache
+E:\anamnese DashboardAPI\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.deps.json
+E:\anamnese DashboardAPI\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.json
+E:\anamnese DashboardAPI\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
+E:\anamnese DashboardAPI\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
+E:\anamnese DashboardAPI\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
+E:\anamnese DashboardAPI\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
+E:\anamnese DashboardAPI\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
+E:\anamnese DashboardAPI\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
+E:\anamnese DashboardAPI\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
+E:\anamnese DashboardAPI\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
+E:\anamnese DashboardAPI\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
+E:\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.deps.json
+E:\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.json
+E:\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
+E:\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
+E:\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csprojAssemblyReference.cache
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
+E:\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
+D:\Enamnese\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.deps.json
+D:\Enamnese\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.json
+D:\Enamnese\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
+D:\Enamnese\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
+D:\Enamnese\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
+D:\Enamnese\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.AssemblyReference.cache
