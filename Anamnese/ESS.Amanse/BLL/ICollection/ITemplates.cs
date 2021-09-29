@@ -15,6 +15,7 @@ namespace ESS.Amanse.BLL.ICollection
         string DeleteTemplateFromHomeLink(long id);
         void MoveUp(long id);
         void MoveDown(long id);
+        string DeleteHomeLink(long id);
         string Move(int moveFrom, int Moveto);
     }
 }

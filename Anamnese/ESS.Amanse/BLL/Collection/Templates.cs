@@ -107,6 +107,19 @@ namespace ESS.Amanse.BLL.Collection
             {
                 dbContext.tblHomeflowTemplates.Remove(dbContext.tblHomeflowTemplates.Find(id));
                 dbContext.SaveChanges();
+                return "Template remove from link successfully...";
+            }
+            catch (Exception)
+            {
+                return "error";
+            }
+        }
+        public string DeleteHomeLink(long id)
+        {
+            try
+            {
+                dbContext.tblanamnesis_at_home_flow.Remove(dbContext.tblanamnesis_at_home_flow.Find(id));
+                dbContext.SaveChanges();
                 return "Template remove successfully...";
             }
             catch (Exception)

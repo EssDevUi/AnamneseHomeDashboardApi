@@ -99,6 +99,13 @@ namespace DashboardAPI.Controllers
         {
             return _Templates.DeleteTemplateFromHomeLink(id);
         }
+        [Route("external/[controller]/1001/document_templates/{id}/remove")]
+        [HttpDelete]
+        public string removeHomeLink(long id)//used
+        {
+            return _Templates.DeleteHomeLink(id);
+        }
+
         [Route("external/[controller]/{id}/edit")]
         [HttpGet]
         public IActionResult getAllhomeLinks(long id)//used
