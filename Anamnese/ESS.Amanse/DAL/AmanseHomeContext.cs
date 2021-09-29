@@ -31,6 +31,7 @@ namespace ESS.Amanse.DAL
         public virtual DbSet<anamnesis_at_home_flow> tblanamnesis_at_home_flow { get; set; }
         public virtual DbSet<HomeflowTemplates> tblHomeflowTemplates { get; set; }
         public virtual DbSet<VorlagenCategory> tblVorlagenCategory { get; set; }
+        public virtual DbSet<MainProfile> tblMainProfile { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

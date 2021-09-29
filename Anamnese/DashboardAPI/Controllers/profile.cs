@@ -1,5 +1,6 @@
 ﻿using ESS.Amanse.BLL.ICollection;
 using ESS.Amanse.DAL;
+using ESS.Amanse.ViewModels.MainProfile;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Text.Json;
@@ -20,23 +21,22 @@ namespace DashboardAPI.Controllers
         [HttpGet]
         public string Get(long id)
         {
-            //var profile = _Profile.getProfileByID(id);
-            return JsonSerializer.Serialize("s"/*profile*/);
+            var profile = _Profile.getProfileByID(id);
+            return JsonSerializer.Serialize(profile);
         }
 
         [Route("external/[controller]")]
         [HttpPost]
-        public void Post(string Salutation, string firstName , string LastName, string Email , string Password )
+        public void Post(MainProfileViewModel model)
         {
-            //dynamic JsonFormData = JObject.Parse(HttpContext.Request.Headers["data"]);
-            //TblProfile Profile = new TblProfile();
-            //Profile.ProfileId = JsonFormData.ProfileID;
-            //Profile.Salutation = JsonFormData.Salutation;
-            //Profile.FirstName = JsonFormData.Fname;
-            //Profile.LastName = JsonFormData.LastName;
-            //Profile.Email= JsonFormData.Email;
-            //Profile.Password= JsonFormData.Password;
-            //_Profile.AddorUpdate(Profile);
+            MainProfile profile = new MainProfile();
+            profile.ID = model.ID != null ? model.ID.Value : 0;
+            profile.FirstName = model.FirstName;
+            profile.LastName = model.LastName;
+            profile.Password = model.Password;
+            profile.Salutation = model.Salutation;
+            profile.Email = model.Email;
+            _Profile.AddorUpdate(profile);
         }
 
     }

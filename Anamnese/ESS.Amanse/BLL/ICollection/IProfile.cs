@@ -8,7 +8,7 @@ namespace ESS.Amanse.BLL.ICollection
     public interface IProfile
     {
 
-        //TblProfile getProfileByID(long Id);
-        //string AddorUpdate(TblProfile Model);
+        MainProfile getProfileByID(long Id);
+        string AddorUpdate(MainProfile Model);
     }
 }

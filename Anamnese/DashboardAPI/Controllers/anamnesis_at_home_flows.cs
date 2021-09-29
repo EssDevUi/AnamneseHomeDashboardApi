@@ -65,16 +65,20 @@ namespace DashboardAPI.Controllers
         }
         [Route("external/[controller]")]
         [HttpPost]
-        public string CreateNewHomeLink(home_flowsCreateNewViewModel model) //used
+        public string CreateorEditHomeLink(home_flowsCreateNewViewModel model) //used
         {
             return _AnamnesisAtHomeFlows.AddAFlow(model);
         }
 
         [Route("external/[controller]/{templateId}/{HomeLinkID}")]
         [HttpPost]
-        public string AddtemplateInHomeLink(long templateId, long HomeLinkID)//used
+        public IActionResult AddtemplateInHomeLink(long templateId, long HomeLinkID)//used
         {
-            return _Templates.AddtemplateInHomeLink(templateId, HomeLinkID);
+             _Templates.AddtemplateInHomeLink(templateId, HomeLinkID);
+            var data = ReturnUpdatedHomeLinks(int.Parse(HttpContext.Request.Headers["homeFlowId"]));
+            var record = data.anamnesis_at_home_flows;
+            var templateid = data.VorlegenForEditHomeLink;
+            return Ok(new { record, templateid });
         }
         [Route("external/[controller]/{id}")]
         [HttpGet]
@@ -95,9 +99,13 @@ namespace DashboardAPI.Controllers
         // remove
         [Route("external/[controller]/1001/document_templates/{id}/remove")]
         [HttpPost]
-        public string remove(long id)//used
+        public IActionResult remove(long id)//used
         {
-            return _Templates.DeleteTemplateFromHomeLink(id);
+             _Templates.DeleteTemplateFromHomeLink(id);
+            var data = ReturnUpdatedHomeLinks(int.Parse(HttpContext.Request.Headers["homeFlowId"]));
+            var record = data.anamnesis_at_home_flows;
+            var templateid = data.VorlegenForEditHomeLink;
+            return Ok(new { record, templateid });
         }
         [Route("external/[controller]/1001/document_templates/{id}/remove")]
         [HttpDelete]
@@ -142,19 +150,24 @@ namespace DashboardAPI.Controllers
         // move_up
         [Route("external/[controller]/1001/document_templates/{id}/move_up")]
         [HttpGet]
-        public string move_up(long id)//used
+        public IActionResult move_up(long id)//used
         {
             _Templates.MoveUp(id);
-
-            return "Template against id " + id + " is Move up..";
+            var data = ReturnUpdatedHomeLinks(int.Parse(HttpContext.Request.Headers["homeFlowId"]));
+            var record = data.anamnesis_at_home_flows;
+            var templateid = data.VorlegenForEditHomeLink;
+            return Ok(new { record, templateid });
         }
         // move_down
         [Route("external/[controller]/1001/document_templates/{id}/move_down")]
         [HttpGet]
-        public string move_down(long id)//used
+        public IActionResult move_down(long id)//used
         {
             _Templates.MoveDown(id);
-            return "Template against id " + id + " is Move down..";
+            var data = ReturnUpdatedHomeLinks(int.Parse(HttpContext.Request.Headers["homeFlowId"]));
+            var record = data.anamnesis_at_home_flows;
+            var templateid = data.VorlegenForEditHomeLink;
+            return Ok(new { record, templateid });
         }
         // move
         [Route("external/[controller]/1001/document_templates/{id}/move")]
@@ -189,6 +202,40 @@ namespace DashboardAPI.Controllers
             string jsondata = "{\"parentId\":1060,\"position\":0,\"name\":\"AnamneseErwachsene\",\"id\":13228}";
             return jsondata;
 
+        }
+        private HomeLinkandTemplateViewModel ReturnUpdatedHomeLinks(long id)//used
+        {
+            var obj = _AnamnesisAtHomeFlows.GetByID(id);
+            var selectedTemplatesId = obj.HomeflowTemplates.Select(x => x.VorlagenID).ToList();
+            List<VorlagenViewModel> templateList = new List<VorlagenViewModel>();
+            foreach (var temp in obj.HomeflowTemplates)
+            {
+                VorlagenViewModel tempobj = new VorlagenViewModel();
+                tempobj.id = temp.Vorlagen.id;
+                tempobj.SortIndex = temp.Vorlagen.SortIndex;
+                tempobj.templates = temp.Vorlagen.templates;
+                tempobj.HomeflowTemplatesID = temp.id;
+                templateList.Add(tempobj);
+            }
+            anamnesis_at_home_flowsViewModel record = new anamnesis_at_home_flowsViewModel
+            {
+                @default = obj.@default,
+                display_email = obj.display_email,
+                display_phone = obj.display_phone,
+                id = obj.id,
+                link = obj.link,
+                name = obj.name,
+                notification_email = obj.notification_email,
+                Vorlagen = templateList.OrderBy(x => x.SortIndex).ToList()
+            };
+
+            var templateid = _Templates.GetAllTemplatesC12().Where(x => !selectedTemplatesId.Contains(x.id));
+            HomeLinkandTemplateViewModel model = new HomeLinkandTemplateViewModel
+            {
+                anamnesis_at_home_flows = record,
+                VorlegenForEditHomeLink = templateid
+            };
+            return model;
         }
     }
 }

@@ -15,6 +15,8 @@
     <Compile Remove="Migrations\20210928095228_Update table anamnesis_at_home_flowID.Designer.cs" />
     <Compile Remove="Migrations\20210928100053_Update table anamnesis_at_home_flow.cs" />
     <Compile Remove="Migrations\20210928100053_Update table anamnesis_at_home_flow.Designer.cs" />
+    <Compile Remove="Migrations\20210929101247_create tblMainProfile.cs" />
+    <Compile Remove="Migrations\20210929101247_create tblMainProfile.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
