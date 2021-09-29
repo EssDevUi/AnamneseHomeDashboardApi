@@ -117,7 +117,7 @@ namespace DashboardAPI.Controllers
         [HttpPost]
         public string app_options(app_optionsViewModel model)
         {
-            //dynamic JsonFormData = JObject.Parse(HttpContext.Request.Headers["data"]);
+            //dynamic JsonFormData = JObject.Parse(HttpContext.Request.Headers["data"]); 
             _Practice.AddorUpdateapp_options(model);
             return "App options save...";
         }
