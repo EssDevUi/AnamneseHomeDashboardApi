@@ -21,22 +21,38 @@ namespace ESS.Amanse.BLL.Collection
         }
         public anamnesis_at_home_flow GetByID(long Id)
         {
-            return dbContext.tblanamnesis_at_home_flow.Include(x=>x.HomeflowTemplates).ThenInclude(x=>x.Vorlagen).Where(x => x.id == Id).FirstOrDefault();
+            return dbContext.tblanamnesis_at_home_flow.Include(x => x.HomeflowTemplates).ThenInclude(x => x.Vorlagen).Where(x => x.id == Id).FirstOrDefault();
         }
         public string AddAFlow(home_flowsCreateNewViewModel model)
         {
             try
             {
-                anamnesis_at_home_flow obj = new anamnesis_at_home_flow();
-                obj.@default = model.@default;
-                obj.display_email = model.display_email;
-                obj.display_phone = model.display_phone;
-                obj.link = model.link;
-                obj.name = model.name;
-                obj.notification_email = model.notification_email;
-                dbContext.tblanamnesis_at_home_flow.Add(obj);
-                dbContext.SaveChanges();
-                return "Home Link Add Successfully...";
+                if (model.HomeFlowLinkID.HasValue)
+                {
+                    var oldobject = dbContext.tblanamnesis_at_home_flow.Find(model.HomeFlowLinkID);
+                    oldobject.@default = model.@default;
+                    oldobject.display_email = model.display_email;
+                    oldobject.display_phone= model.display_phone;
+                    oldobject.name= model.name;
+                    oldobject.notification_email= model.notification_email;
+                    dbContext.tblanamnesis_at_home_flow.Update(oldobject);
+                    dbContext.SaveChanges();
+                    return "Home Link Update Successfully...";
+                }
+                else
+                {
+                    anamnesis_at_home_flow obj = new anamnesis_at_home_flow();
+                    obj.@default = model.@default;
+                    obj.display_email = model.display_email;
+                    obj.display_phone = model.display_phone;
+                    obj.link = model.link;
+                    obj.name = model.name;
+                    obj.notification_email = model.notification_email;
+                    dbContext.tblanamnesis_at_home_flow.Add(obj);
+                    dbContext.SaveChanges();
+                    return "Home Link Add Successfully...";
+                }
+           
             }
             catch (Exception)
             {

@@ -94,17 +94,18 @@ namespace DashboardAPI.Controllers
         }
         [Route("external/welcome_wizard/anamnesis_pin")]
         [HttpGet]
-        public string Getanamnesis_pin()
+        public string Getanamnesis_pin(long id)
         {
-
-            return "practice Danger zone password received from API...";
+            return _Practice.getPractice(id).DangerZonePassword;
+            //return "practice Danger zone password received from API...";
         }
         [Route("external/welcome_wizard/anamnesis_pin")]
         [HttpPost]
         public string anamnesis_pin(anamnesis_pinViewModel model)
         {
+            return _Practice.AddorUpdateanamnesis_pin(model);
             //dynamic JsonFormData = JObject.Parse(HttpContext.Request.Headers["data"]);
-            return "practice Danger zone password save...";
+            //return "practice Danger zone password save...";
         }
         [Route("external/welcome_wizard/app_options")]
         [HttpGet]

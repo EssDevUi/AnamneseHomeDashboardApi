@@ -6,6 +6,7 @@ namespace ESS.Amanse.ViewModels.anamnesis_at_home_flows
 {
     public class home_flowsCreateNewViewModel
     {
+        public long? HomeFlowLinkID { get; set; }
         public string name { get; set; }
         public string link { get; set; }
         public string notification_email { get; set; }
