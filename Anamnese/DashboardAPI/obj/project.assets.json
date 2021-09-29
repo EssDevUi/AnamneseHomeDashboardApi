@@ -9243,11 +9243,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Enamnese\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+      "projectUniqueName": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
       "projectName": "DashboardAPI",
-      "projectPath": "D:\\Enamnese\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+      "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
       "packagesPath": "C:\\Users\\Moavia computer\\.nuget\\packages\\",
-      "outputPath": "D:\\Enamnese\\Anamnese\\DashboardAPI\\obj\\",
+      "outputPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Moavia computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9264,8 +9264,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Enamnese\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
-              "projectPath": "D:\\Enamnese\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj"
+            "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
+              "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj"
             }
           }
         }

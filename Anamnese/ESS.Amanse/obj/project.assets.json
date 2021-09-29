@@ -2908,11 +2908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Enamnese\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+      "projectUniqueName": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
       "projectName": "ESS.Amanse",
-      "projectPath": "D:\\Enamnese\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+      "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
       "packagesPath": "C:\\Users\\Moavia computer\\.nuget\\packages\\",
-      "outputPath": "D:\\Enamnese\\Anamnese\\ESS.Amanse\\obj\\",
+      "outputPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Moavia computer\\AppData\\Roaming\\NuGet\\NuGet.Config",

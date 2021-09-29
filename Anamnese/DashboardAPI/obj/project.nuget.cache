@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P3BcsFiHgA50c/fszVkxrQcMYK+dgS2rIG+Rw6j2PwDhy1oCtC0+IuqbnsnIHCLTuHsunU+0nD66hKN5/Yeyhw==",
+  "dgSpecHash": "3BDQvl7fsDzBvN0al3wMbBaG834QE+OhsMcyntukLun1ZKW1SXy2H1/F2AVBXz4ePRykhnUx5SZqgjY7koKDUQ==",
   "success": true,
-  "projectFilePath": "D:\\Enamnese\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+  "projectFilePath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Moavia computer\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Moavia computer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

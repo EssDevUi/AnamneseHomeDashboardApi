@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dEAm/H/9hYxFDUt11UL+EHgWIMj6HZeyrf5axIAfQDIXna0e6goVAFodf5goFwjiHrM4i0sraJXWPV0+LxcEpA==",
+  "dgSpecHash": "Ya0AxdUf07tg/rfnqUeE1cd5vpPYs1pv+ipNFA4vr24on52UN8B6rEPQO69b2IB4+/8pfaekTsaKLYRI4uaKcg==",
   "success": true,
-  "projectFilePath": "D:\\Enamnese\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+  "projectFilePath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Moavia computer\\.nuget\\packages\\efcore.bulkextensions\\3.6.1\\efcore.bulkextensions.3.6.1.nupkg.sha512",
     "C:\\Users\\Moavia computer\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
