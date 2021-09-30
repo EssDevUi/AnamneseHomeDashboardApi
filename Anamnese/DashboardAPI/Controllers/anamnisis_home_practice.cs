@@ -74,7 +74,7 @@ namespace DashboardAPI.Controllers
         public string Getpractice_logo(long Id)
         {
             var data = _Practice.getPractice(Id);
-
+         
             byte[] imageArray = System.IO.File.ReadAllBytes(data.Logo);
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
@@ -109,16 +109,10 @@ namespace DashboardAPI.Controllers
         }
         [Route("external/welcome_wizard/app_options")]
         [HttpGet]
-        public ActionResult getapp_options(long Id)
+        public string getapp_options(long Id)
         {
-            var data = _Practice.getPractice(Id);
-            app_optionsViewModel model = new app_optionsViewModel();
-            model.BlockingPassword = data.BlockingPassword;
-            model.BugReports = data.BugReports;
-            model.Sendanalyticsdata = data.sendanalyticsdata;
-            model.AllowPriviousEntry = data.AllowPriviousEntry;
-            model.NavigateTo = data.NavigateTo;
-            return Ok(model);
+
+            return "App options received from API...";
         }
         [Route("external/welcome_wizard/app_options")]
         [HttpPost]
