@@ -1,38 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj": {}
+    "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj": {
+    "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+        "projectUniqueName": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
         "projectName": "DashboardAPI",
-        "projectPath": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
-        "packagesPath": "C:\\Users\\Usama\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\obj\\",
+        "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+        "packagesPath": "C:\\Users\\Moavia computer\\.nuget\\packages\\",
+        "outputPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usama\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Users\\Moavia computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.devexpress.com/JjzvilqEmtGdRXzyDord1nAQMQcgccfZJyTwiqfnqwtJxeWcbl/api": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
-                "projectPath": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj"
+              "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
+                "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj"
               }
             }
           }
@@ -110,32 +107,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
+    "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+        "projectUniqueName": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
         "projectName": "ESS.Amanse",
-        "projectPath": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
-        "packagesPath": "C:\\Users\\Usama\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\obj\\",
+        "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+        "packagesPath": "C:\\Users\\Moavia computer\\.nuget\\packages\\",
+        "outputPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usama\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Users\\Moavia computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.devexpress.com/JjzvilqEmtGdRXzyDord1nAQMQcgccfZJyTwiqfnqwtJxeWcbl/api": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -201,7 +195,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

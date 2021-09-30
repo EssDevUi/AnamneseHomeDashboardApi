@@ -57,15 +57,3 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.deps.json
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.json
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.AssemblyReference.cache
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
-D:\Projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
