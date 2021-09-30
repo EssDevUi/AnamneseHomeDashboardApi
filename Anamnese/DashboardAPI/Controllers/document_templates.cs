@@ -22,11 +22,20 @@ namespace DashboardAPI.Controllers
     public class document_templates : ControllerBase
     {
         private readonly IWebHostEnvironment _hostingEnvironment;
-        public document_templates( IWebHostEnvironment hostingEnvironment)
+        private readonly ITemplates _Templates;
+        public document_templates(IWebHostEnvironment hostingEnvironment, ITemplates Templates)
         {
             _hostingEnvironment = hostingEnvironment;
+            _Templates = Templates;
         }
 
+        [Route("external/[controller]/TemplatesTypes")]
+        [HttpGet]
+        public IActionResult GetTemplatesTypes() ///used
+        {
+            var types = _Templates.GetAllTemplatesTypes();
+            return Ok(types);
+        }
         [Route("external/[controller]/Sheets")]
         [HttpGet]
         public IActionResult GetTemplatesSheets()
@@ -46,9 +55,10 @@ namespace DashboardAPI.Controllers
         }
         [Route("external/[controller]/{id}")]
         [HttpGet]
-        public string GetTemplatesByid(int id)
+        public IActionResult GetTemplatesByid(int id)
         {
-            return "Form against id " + id + " is found..";
+            var model = _Templates.GetTemplateById(id);
+            return Ok( model);
         }
         // here with practice-data
         [Route("atn_editor_api/v1/[controller]/{id}")]
@@ -59,78 +69,47 @@ namespace DashboardAPI.Controllers
         }
         [Route("external/[controller]/{id}")]
         [HttpDelete]
-        public string DeleteTemplateSheet(long id)
+        public IActionResult DeleteTemplateSheet(long id)
         {
-            return "Form against id " + id + " is deleted..";
-
-            //_Templates.DeleteTemplateSheet(id);
-
-            //var List = _Templates.GetTemplateSheets();
-
-            //var SysInformationSheet = List.Where(x => x.SheetTypeId == 1 && x.TemplateTypeId == 1);
-            //var OwnInformationSheet = List.Where(x => x.SheetTypeId == 1 && x.TemplateTypeId == 2);
-            //var SysMedicalhistorysheets = List.Where(x => x.SheetTypeId == 2 && x.TemplateTypeId == 1);
-            //var OwnMedicalhistorysheets = List.Where(x => x.SheetTypeId == 2 && x.TemplateTypeId == 2);
-            //dynamic MyDynamic = new System.Dynamic.ExpandoObject();
-            //MyDynamic.SysInformationSheet = SysInformationSheet;
-            //MyDynamic.OwnInformationSheet = OwnInformationSheet;
-            //MyDynamic.SysMedicalhistorysheets = SysMedicalhistorysheets;
-            //MyDynamic.OwnMedicalhistorysheets = OwnMedicalhistorysheets;
-            //return Ok(MyDynamic);
-
+            _Templates.DeleteTemplates(id);
+            var templates = _Templates.getallDocumentTemplates();
+            List<Vorlagen> templateid1 = new List<Vorlagen>();
+            List<Vorlagen> templateid2 = new List<Vorlagen>();
+            if (templates.Count > 0)
+            {
+                templateid1 = templates.Where(x => x.CategoryID == 1).ToList();
+                templateid2 = templates.Where(x => x.CategoryID == 2).ToList();
+            }
+            return Ok(new { templateid1, templateid2 });
         }
         [Route("external/[controller]/new")]
         [HttpPost]
         public string newTemplate(TemplateDuplicateViewModel model)
         {
-            return "Form Created Successfully...";
+            return _Templates.CreatenewTemplate(model);
         }
         [Route("external/[controller]/new_from/{from_id}")]
         [HttpPost]
         public string Duplicate(int from_id, TemplateDuplicateViewModel model)
-         {
+        {
             return "Yor form against id " + from_id + " is duplicated..";
         }
         [Route("external/[controller]")]
         [HttpGet]
         public IActionResult getall_document_templates()
         {
-            List<string> templateid1 = new List<string>();
-            List<string> templateid2 = new List<string>();
-            foreach (string fileName in Directory.GetFiles("Athena Aufklärungsbögen", "*.json"))
+            var templates = _Templates.getallDocumentTemplates();
+            List<Vorlagen> templateid1 = new List<Vorlagen>();
+            List<Vorlagen> templateid2 = new List<Vorlagen>();
+            if (templates.Count > 0)
             {
-                using (StreamReader r = new StreamReader(fileName))
-                {
-                    string json = r.ReadToEnd();
-                    dynamic stuff = JObject.Parse(json);
-                    dynamic jsonObject = new ExpandoObject();
-                    jsonObject.id = stuff.document_template.id;
-                    jsonObject.title = stuff.document_template.title;
-                    jsonObject.template_category_id = stuff.document_template.template_category_id;
-                    jsonObject.@default= stuff.document_template.@default;
-
-
-                    templateid1.Add(JsonConvert.SerializeObject(jsonObject));
-                }
-                // Do something with the file content
-            }
-            foreach (string fileName in Directory.GetFiles("Athena Beratungsprotokolle", "*.json"))
-            {
-                using (StreamReader r = new StreamReader(fileName))
-                {
-                    string json = r.ReadToEnd();
-                    dynamic stuff = JObject.Parse(json);
-                    dynamic jsonObject = new ExpandoObject();
-                    jsonObject.id = stuff.document_template.id;
-                    jsonObject.title = stuff.document_template.title;
-                    jsonObject.template_category_id = stuff.document_template.template_category_id;
-                    jsonObject.@default = stuff.document_template.@default;
-                    templateid2.Add(JsonConvert.SerializeObject(jsonObject));
-                }
-                // Do something with the file content
+                templateid1 = templates.Where(x => x.CategoryID == 1).ToList();
+                templateid2 = templates.Where(x => x.CategoryID == 2).ToList();
             }
 
-            return Ok(new{templateid1,templateid2});
+            return Ok(new { templateid1, templateid2 });
         }
+
+
     }
 }

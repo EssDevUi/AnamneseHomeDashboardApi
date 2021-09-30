@@ -13,6 +13,7 @@ namespace ESS.Amanse.ViewModels
     }
     public class document_template
     {
+        public long id { get; set; }
         public string title { get; set; }
         public int template_category_id { get; set; }
     }

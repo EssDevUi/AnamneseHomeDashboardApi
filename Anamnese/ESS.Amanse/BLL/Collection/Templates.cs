@@ -127,6 +127,41 @@ namespace ESS.Amanse.BLL.Collection
                 return "error";
             }
         }
+        public List<VorlagenCategory> GetAllTemplatesTypes()
+        {
+            return dbContext.tblVorlagenCategory.ToList();
+        }
+        public string CreatenewTemplate(TemplateDuplicateViewModel model)
+        {
+            if (model.document_template.id > 0)
+            {
+                var obj = dbContext.tblVorlagen.Find(model.document_template.id);
+                obj.CategoryID = model.document_template.template_category_id;
+                obj.templates = model.document_template.title;
+                dbContext.tblVorlagen.Update(obj);
+                dbContext.SaveChanges();
+                return "Template Update Successfully...";
+            }
+            else
+            {
+                Vorlagen template = new Vorlagen();
+                template.CategoryID = model.document_template.template_category_id;
+                template.templates = model.document_template.title;
+                dbContext.tblVorlagen.Add(template);
+                dbContext.SaveChanges();
+                return "Template Created Successfully...";
+            }
 
+        }
+        public List<Vorlagen> getallDocumentTemplates()
+        {
+            return dbContext.tblVorlagen.ToList();
+        }
+        public string DeleteTemplates(long id)
+        {
+            dbContext.tblVorlagen.Remove(dbContext.tblVorlagen.Find(id));
+            dbContext.SaveChanges();
+            return "Template Deleete Successfully...";
+        }
     }
 }

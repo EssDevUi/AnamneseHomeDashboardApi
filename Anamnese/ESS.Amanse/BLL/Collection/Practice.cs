@@ -148,6 +148,7 @@ namespace ESS.Amanse.BLL.Collection
                     oldProfile.AllowPriviousEntry = Model.AllowPriviousEntry;
                     oldProfile.BlockingPassword = Model.BlockingPassword;
                     oldProfile.BugReports = Model.BugReports;
+                    oldProfile.BugReportTime = Convert.ToDateTime(Model.BugReportTime); 
                     oldProfile.NavigateTo = Model.NavigateTo;
                     Update(oldProfile);
                     msg = "App_options Update Successfully";

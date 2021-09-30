@@ -17,5 +17,9 @@ namespace ESS.Amanse.BLL.ICollection
         void MoveDown(long id);
         string DeleteHomeLink(long id);
         string Move(int moveFrom, int Moveto);
+        List<VorlagenCategory> GetAllTemplatesTypes();
+        string CreatenewTemplate(TemplateDuplicateViewModel model);
+        List<Vorlagen> getallDocumentTemplates();
+        string DeleteTemplates(long id);
     }
 }
