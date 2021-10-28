@@ -19,6 +19,26 @@ namespace ESS.Amanse.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ESS.Amanse.DAL.Abnormalities", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Abnormality")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("DocumentId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DocumentId");
+
+                    b.ToTable("tblAbnormalities");
+                });
+
             modelBuilder.Entity("ESS.Amanse.DAL.HomeflowTemplates", b =>
                 {
                     b.Property<long>("id")
@@ -68,6 +88,47 @@ namespace ESS.Amanse.Migrations
                     b.ToTable("tblMainProfile");
                 });
 
+            modelBuilder.Entity("ESS.Amanse.DAL.MedicalHistory", b =>
+                {
+                    b.Property<long>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("created_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("date_of_birth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("first_name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("last_name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("patient_payload")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("practice_id")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("pvs_patid")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("submitted_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("pvs_patid");
+
+                    b.ToTable("tblMedicalHistory");
+                });
+
             modelBuilder.Entity("ESS.Amanse.DAL.Vorlagen", b =>
                 {
                     b.Property<long>("id")
@@ -81,8 +142,14 @@ namespace ESS.Amanse.Migrations
                     b.Property<int>("SortIndex")
                         .HasColumnType("int");
 
+                    b.Property<string>("atn_v2")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("default")
                         .HasColumnType("bit");
+
+                    b.Property<string>("languages")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("templates")
                         .HasColumnType("nvarchar(max)");
@@ -282,6 +349,9 @@ namespace ESS.Amanse.Migrations
                     b.Property<long>("anamnesis_form_id")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("anamnesis_report")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("atn")
                         .HasColumnType("nvarchar(max)");
 
@@ -313,8 +383,8 @@ namespace ESS.Amanse.Migrations
                     b.Property<string>("path_to_timestamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("patient_id")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<long>("patient_id")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("payload")
                         .HasColumnType("nvarchar(max)");
@@ -347,6 +417,8 @@ namespace ESS.Amanse.Migrations
                         .HasMaxLength(255);
 
                     b.HasKey("id");
+
+                    b.HasIndex("patient_id");
 
                     b.ToTable("tbldocuments");
                 });
@@ -417,9 +489,9 @@ namespace ESS.Amanse.Migrations
 
             modelBuilder.Entity("ESS.Amanse.DAL.patients", b =>
                 {
-                    b.Property<int>("MyProperty")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("address1")
@@ -587,7 +659,7 @@ namespace ESS.Amanse.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
 
-                    b.HasKey("MyProperty");
+                    b.HasKey("Id");
 
                     b.ToTable("tblpatients");
                 });
@@ -715,6 +787,15 @@ namespace ESS.Amanse.Migrations
                     b.ToTable("tblsignatures");
                 });
 
+            modelBuilder.Entity("ESS.Amanse.DAL.Abnormalities", b =>
+                {
+                    b.HasOne("ESS.Amanse.DAL.documents", "tbldocuments")
+                        .WithMany("tblAbnormalities")
+                        .HasForeignKey("DocumentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ESS.Amanse.DAL.HomeflowTemplates", b =>
                 {
                     b.HasOne("ESS.Amanse.DAL.Vorlagen", "Vorlagen")
@@ -730,11 +811,27 @@ namespace ESS.Amanse.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ESS.Amanse.DAL.MedicalHistory", b =>
+                {
+                    b.HasOne("ESS.Amanse.DAL.patients", "patient")
+                        .WithMany()
+                        .HasForeignKey("pvs_patid");
+                });
+
             modelBuilder.Entity("ESS.Amanse.DAL.Vorlagen", b =>
                 {
                     b.HasOne("ESS.Amanse.DAL.VorlagenCategory", "VorlagenCategory")
                         .WithMany("Vorlagen")
                         .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ESS.Amanse.DAL.documents", b =>
+                {
+                    b.HasOne("ESS.Amanse.DAL.patients", "patient")
+                        .WithMany()
+                        .HasForeignKey("patient_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

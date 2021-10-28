@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 
 namespace ESS.Amanse.BLL.Collection
@@ -15,19 +16,21 @@ namespace ESS.Amanse.BLL.Collection
         public Document(AmanseHomeContext context) : base(context)
         {
         }
-        //public IEnumerable<DocumentViewModel> GetAllDocument()
-        //{
+        public IEnumerable<DocumentViewModel> GetAllDocument()
+        {
 
-        //    var List = Include(x => x.DocumentType).Include(x => x.State).Select(x => new DocumentViewModel
-        //    {
-        //        DocumentId = x.DocumentId,
-        //        Title = x.Title,
-        //        DocumentType = x.DocumentType.DocumentType,
-        //        CreatedOn = x.CreatedOn,
-        //        State = x.State.State
-
-        //    }).ToList();
-        //    return List;
-        //}
+            var List = dbContext.tbldocuments.Include(x => x.patient).Include(x => x.tblAbnormalities).Select(x => new DocumentViewModel
+            {
+                id = x.id,
+                title = x.title,
+                type = x.type,
+                timestamp = x.created_at,
+                anamnesis_report = x.tblAbnormalities.ToList(),
+                DT_RowId = x.id,
+                path_to_pdf = x.path_to_pdf,
+                patient_name = x.patient.first_name + x.patient.last_name
+            }).ToList();
+            return List;
+        }
     }
 }

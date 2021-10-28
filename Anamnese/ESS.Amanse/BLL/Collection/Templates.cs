@@ -131,6 +131,19 @@ namespace ESS.Amanse.BLL.Collection
         {
             return dbContext.tblVorlagenCategory.ToList();
         }
+        public void Duplicate(TemplateDuplicateViewModel model)
+        {
+            var obj = dbContext.tblVorlagen.Find(model.document_template.id);
+            
+            Vorlagen template = new Vorlagen();
+            template.CategoryID = model.document_template.template_category_id;
+            template.templates = model.document_template.title;
+            template.languages = obj.languages;
+            template.SortIndex = obj.SortIndex+1;
+            template.atn_v2 = obj.atn_v2;
+            dbContext.tblVorlagen.Add(template);
+            dbContext.SaveChanges();
+        }
         public string CreatenewTemplate(TemplateDuplicateViewModel model)
         {
             if (model.document_template.id > 0)
@@ -153,6 +166,22 @@ namespace ESS.Amanse.BLL.Collection
             }
 
         }
+        public bool EditTemplateTitleFromeditor(string title,long templateid)
+        {
+            try
+            {
+                var obj = dbContext.tblVorlagen.Find(templateid);
+                obj.templates = title;
+                dbContext.tblVorlagen.Update(obj);
+                dbContext.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+                
+        }
         public List<Vorlagen> getallDocumentTemplates()
         {
             return dbContext.tblVorlagen.ToList();
@@ -163,5 +192,36 @@ namespace ESS.Amanse.BLL.Collection
             dbContext.SaveChanges();
             return "Template Deleete Successfully...";
         }
+        public string AddorUpdate(Vorlagen Model)
+        {
+            try
+            {
+                string msg = string.Empty;
+                if (Model.id > 0)
+                {
+                    var oldDocumentTemplates = Find(x => x.id == Model.id);
+                    if (oldDocumentTemplates != null)
+                    {
+                        oldDocumentTemplates.languages = Model.languages;
+                        oldDocumentTemplates.atn_v2 = Model.atn_v2;
+                        Update(oldDocumentTemplates);
+                        msg = "Update";
+                    }
+                    else
+                    {
+                        msg = "Not Found";
+                    }
+
+                }
+                Save();
+                return msg;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+
+        }
+
     }
 }

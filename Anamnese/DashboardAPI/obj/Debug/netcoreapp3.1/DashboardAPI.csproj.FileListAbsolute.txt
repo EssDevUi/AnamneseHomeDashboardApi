@@ -1596,3 +1596,4 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardA
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.dll
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.pdb
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.genruntimeconfig.cache
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.GeneratedMSBuildEditorConfig.editorconfig

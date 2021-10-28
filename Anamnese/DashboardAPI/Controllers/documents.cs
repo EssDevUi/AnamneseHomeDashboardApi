@@ -17,8 +17,9 @@ namespace DashboardAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-           string jsonData= System.IO.File.ReadAllText("athenabox_documents/athenabox_documents_get.json");
-            return Ok(jsonData);
+            var data = _Document.GetAllDocument();
+            //string jsonData= System.IO.File.ReadAllText("athenabox_documents/athenabox_documents_get.json");
+            return Ok(data);
         }
         [Route("external/[controller]/{id}")]
         [HttpGet]

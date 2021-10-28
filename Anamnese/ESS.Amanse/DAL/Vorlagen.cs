@@ -15,6 +15,8 @@ namespace ESS.Amanse.DAL
         public int SortIndex { get; set; }
         public string templates { get; set; }
         public bool @default { get; set; }
+        public string atn_v2 { get; set; }
+        public string languages { get; set; }
         public long CategoryID { get; set; }
         [ForeignKey("CategoryID")]
         public VorlagenCategory VorlagenCategory { get; set; }

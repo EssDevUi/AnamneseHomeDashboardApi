@@ -50,10 +50,11 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.AssemblyReference.cache
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.GeneratedMSBuildEditorConfig.editorconfig
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.AssemblyReference.cache

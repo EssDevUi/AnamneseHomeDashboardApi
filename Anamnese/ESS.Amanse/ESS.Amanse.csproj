@@ -17,6 +17,38 @@
     <Compile Remove="Migrations\20210928100053_Update table anamnesis_at_home_flow.Designer.cs" />
     <Compile Remove="Migrations\20210929101247_create tblMainProfile.cs" />
     <Compile Remove="Migrations\20210929101247_create tblMainProfile.Designer.cs" />
+    <Compile Remove="Migrations\20211005064332_Update Abnormalitiesa.cs" />
+    <Compile Remove="Migrations\20211005064332_Update Abnormalitiesa.Designer.cs" />
+    <Compile Remove="Migrations\20211005064433_Update Abnormalitiesa.cs" />
+    <Compile Remove="Migrations\20211005064433_Update Abnormalitiesa.Designer.cs" />
+    <Compile Remove="Migrations\20211005093442_Update table MedicalHistorys.cs" />
+    <Compile Remove="Migrations\20211005093442_Update table MedicalHistorys.Designer.cs" />
+    <Compile Remove="Migrations\20211005093621_Update table MedicalHistorys.cs" />
+    <Compile Remove="Migrations\20211005093621_Update table MedicalHistorys.Designer.cs" />
+    <Compile Remove="Migrations\20211005093723_Update table MedicalHistorys.cs" />
+    <Compile Remove="Migrations\20211005093723_Update table MedicalHistorys.Designer.cs" />
+    <Compile Remove="Migrations\20211005094242_Update table MedicalHistorys.cs" />
+    <Compile Remove="Migrations\20211005094242_Update table MedicalHistorys.Designer.cs" />
+    <Compile Remove="Migrations\20211005094521_Update table MedicalHistorys.cs" />
+    <Compile Remove="Migrations\20211005094521_Update table MedicalHistorys.Designer.cs" />
+    <Compile Remove="Migrations\20211005094734_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005094734_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211005095153_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005095153_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211005095426_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005095426_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211005095859_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005095859_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211005095923_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005095923_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211005100033_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005100033_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211005100255_Update table MedicalHistorysdasd.cs" />
+    <Compile Remove="Migrations\20211005100255_Update table MedicalHistorysdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211012070522_asdasdasd.cs" />
+    <Compile Remove="Migrations\20211012070522_asdasdasd.Designer.cs" />
+    <Compile Remove="Migrations\20211012070927_Create DocumentTemplates.cs" />
+    <Compile Remove="Migrations\20211012070927_Create DocumentTemplates.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

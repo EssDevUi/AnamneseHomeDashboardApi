@@ -1,4 +1,6 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+using ESS.Amanse.ViewModels;
+using ESS.Amanse.ViewModels.Patient;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -359,9 +361,10 @@ public class anamnesis_at_home_submissionsViewModel
 
     [JsonProperty("submitted_at")]
     public DateTime SubmittedAt { get; set; }
+    public MedicalHistoryViewModel MedicalHistory { get; set; }
 
     [JsonProperty("patient_payload")]
-    public PatientPayload PatientPayload { get; set; }
+    public List<PatientViewModel> patient_payload { get; set; }/*public PatientPayload PatientPayload { get; set; }*/
 
     [JsonProperty("document_payloads")]
     public List<DocumentPayload> DocumentPayloads { get; set; }

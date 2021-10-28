@@ -1,6 +1,7 @@
 ﻿using ESS.Amanse.BLL.ICollection;
 using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels.MainProfile;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Text.Json;
@@ -9,6 +10,7 @@ using System.Text.Json;
 namespace DashboardAPI.Controllers
 {
     [ApiController]
+    //[EnableCors("MyAllowSpecificOrigins")]
     public class profile : ControllerBase
     {
         private readonly IProfile _Profile;

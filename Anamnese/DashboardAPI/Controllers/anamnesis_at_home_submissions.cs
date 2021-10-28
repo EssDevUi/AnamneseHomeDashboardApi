@@ -16,27 +16,30 @@ namespace DashboardAPI.Controllers
     public class anamnesis_at_home_submissions : ControllerBase
     {
         private readonly IPatient _Patient;
-        public anamnesis_at_home_submissions(IPatient Patient)
+        private readonly IMedicalHistory _MedicalHistory;
+        public anamnesis_at_home_submissions(IPatient Patient, IMedicalHistory MedicalHistory)
         {
+            _MedicalHistory = MedicalHistory;
             _Patient = Patient;
         }
         [Route("external/[controller]")]
         [HttpGet]
         public IActionResult Get()
         {
-            string json = "";
+          var HISTORY=  _MedicalHistory.MedicalHistoryList();
+            //string json = "";
 
-            foreach (string fileName in Directory.GetFiles("api_-_dashboard_-_v1_-_anamnesis_flow_submissions", "api_-_dashboard_-_v1_-_anamnesis_flow_submissions_-_20975_GET.json"))
-            {
-                using (StreamReader r = new StreamReader(fileName))
-                {
-                    string jsonfile = r.ReadToEnd();
-                    var jsonObject = JsonConvert.DeserializeObject(jsonfile);
-                    json=JsonConvert.SerializeObject(jsonObject);
-                }
-                // Do something with the file content
-            }
-            return Ok(json);
+            //foreach (string fileName in Directory.GetFiles("api_-_dashboard_-_v1_-_anamnesis_flow_submissions", "api_-_dashboard_-_v1_-_anamnesis_flow_submissions_-_20975_GET.json"))
+            //{
+            //    using (StreamReader r = new StreamReader(fileName))
+            //    {
+            //        string jsonfile = r.ReadToEnd();
+            //        var jsonObject = JsonConvert.DeserializeObject(jsonfile);
+            //        json=JsonConvert.SerializeObject(jsonObject);
+            //    }
+            //    // Do something with the file content
+            //}
+            return Ok(HISTORY);
         }
         [Route("api/v1/[controller]/fetch")]
         [HttpPost]

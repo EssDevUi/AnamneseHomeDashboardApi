@@ -16,7 +16,7 @@ namespace ESS.Amanse.DAL
             waiting_for_documents = false;
         }
         [Key]
-        public int MyProperty { get; set; }
+        public long Id { get; set; }
         [MaxLength(255)]
         public string first_name { get; set; }
         [MaxLength(255)]

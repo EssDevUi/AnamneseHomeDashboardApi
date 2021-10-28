@@ -74,12 +74,16 @@ namespace DashboardAPI.Controllers
         public string Getpractice_logo(long Id)
         {
             var data = _Practice.getPractice(Id);
+            if (data.Logo == null)
+            {
+                return null;
+            }
 
             byte[] imageArray = System.IO.File.ReadAllBytes(data.Logo);
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
 
-            return base64ImageRepresentation;
+            return "data:image/png;base64," + base64ImageRepresentation;
         }
         [Route("external/welcome_wizard/practice_logo")]
         [HttpPost]

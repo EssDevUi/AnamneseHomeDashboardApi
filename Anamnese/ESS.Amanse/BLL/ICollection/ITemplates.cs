@@ -9,6 +9,7 @@ namespace ESS.Amanse.BLL.ICollection
 {
     public interface ITemplates
     {
+        bool EditTemplateTitleFromeditor(string title, long templateid);
         List<VorlegenForEditHomeLinkViewModel> GetAllTemplatesC12();
         Vorlagen GetTemplateById(long TemplateID);
         string AddtemplateInHomeLink(long templateId, long HomeLinkID);
@@ -21,5 +22,7 @@ namespace ESS.Amanse.BLL.ICollection
         string CreatenewTemplate(TemplateDuplicateViewModel model);
         List<Vorlagen> getallDocumentTemplates();
         string DeleteTemplates(long id);
+        void Duplicate(TemplateDuplicateViewModel model);
+        string AddorUpdate(Vorlagen Model);
     }
 }

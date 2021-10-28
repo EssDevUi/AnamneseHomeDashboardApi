@@ -18,7 +18,9 @@ namespace ESS.Amanse.DAL
         public long id { get; set; }
         [MaxLength(255)]
         public string user_id { get; set; }
-        public Guid patient_id { get; set; }
+        public long patient_id { get; set; }
+        [ForeignKey("patient_id")]
+        public patients patient { get; set; }
         public DateTime timestamp { get; set; }
         [MaxLength(255)]
         public string title { get; set; }
@@ -42,5 +44,8 @@ namespace ESS.Amanse.DAL
         public long signable_id { get; set; }
         public long anamnesis_at_home_submission_id { get; set; }
         public bool? draft { get; set; }
+        public long anamnesis_report { get; set; }
+        public virtual ICollection<Abnormalities> tblAbnormalities { get; set; }
+
     }
 }

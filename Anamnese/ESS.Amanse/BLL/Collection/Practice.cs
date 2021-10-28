@@ -149,6 +149,7 @@ namespace ESS.Amanse.BLL.Collection
                     oldProfile.BlockingPassword = Model.BlockingPassword;
                     oldProfile.BugReports = Model.BugReports;
                     oldProfile.BugReportTime = Convert.ToDateTime(Model.BugReportTime); 
+                    oldProfile.sendanalyticsdata = Model.Sendanalyticsdata;
                     oldProfile.NavigateTo = Model.NavigateTo;
                     Update(oldProfile);
                     msg = "App_options Update Successfully";

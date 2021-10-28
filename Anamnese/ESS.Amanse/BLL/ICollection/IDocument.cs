@@ -8,6 +8,6 @@ namespace ESS.Amanse.BLL.ICollection
 {
     public interface IDocument
     {
-        //IEnumerable<DocumentViewModel> GetAllDocument();
+        IEnumerable<DocumentViewModel> GetAllDocument();
     }
 }

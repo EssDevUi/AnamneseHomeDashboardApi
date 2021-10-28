@@ -107,8 +107,8 @@ namespace DashboardAPI.Controllers
             var templateid = data.VorlegenForEditHomeLink;
             return Ok(new { record, templateid });
         }
-        [Route("external/[controller]/1001/document_templates/{id}/remove")]
-        [HttpDelete]
+        [Route("external/[controller]/1001/document_templates/{id}/removeHomeLink")]
+        [HttpPost]//Delete Complete Link with template
         public string removeHomeLink(long id)//used
         {
             return _Templates.DeleteHomeLink(id);
