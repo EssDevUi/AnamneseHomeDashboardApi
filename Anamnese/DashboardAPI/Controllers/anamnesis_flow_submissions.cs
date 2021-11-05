@@ -107,7 +107,7 @@ namespace DashboardAPI.Controllers
         {
             Guid imageName = Guid.NewGuid();
             model.Logo = _Commons.SaveImage(model.Logo.Replace("data:image/png;base64,", ""), imageName.ToString());
-            return Ok();
+            return Ok(model.Logo);
         }
     }
 }
