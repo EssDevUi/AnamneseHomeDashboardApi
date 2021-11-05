@@ -2903,19 +2903,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Moavia computer\\.nuget\\packages\\": {}
+    "C:\\Users\\sqmdev3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+      "projectUniqueName": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
       "projectName": "ESS.Amanse",
-      "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
-      "packagesPath": "C:\\Users\\Moavia computer\\.nuget\\packages\\",
-      "outputPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\obj\\",
+      "projectPath": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj",
+      "packagesPath": "C:\\Users\\sqmdev3\\.nuget\\packages\\",
+      "outputPath": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Moavia computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sqmdev3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

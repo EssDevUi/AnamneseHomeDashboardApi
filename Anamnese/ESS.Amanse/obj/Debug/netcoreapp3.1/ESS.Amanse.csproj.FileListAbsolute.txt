@@ -58,3 +58,16 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.GeneratedMSBuildEditorConfig.editorconfig
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.AssemblyReference.cache
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.deps.json
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.json
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.runtimeconfig.dev.json
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.dll
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\bin\Debug\netcoreapp3.1\ESS.Amanse.pdb
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.AssemblyReference.cache
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.GeneratedMSBuildEditorConfig.editorconfig
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfoInputs.cache
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.AssemblyInfo.cs
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.csproj.CoreCompileInputs.cache
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.dll
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.pdb
+E:\projects\AnamneseDashbaordapigit\AnamneseHomeDashboardApi\Anamnese\ESS.Amanse\obj\Debug\netcoreapp3.1\ESS.Amanse.genruntimeconfig.cache
