@@ -66,12 +66,12 @@ namespace DashboardAPI.Controllers
             var patientID = _MedicalHistory.CreateMedicalHistroy(json["patient"]["first_name"].ToString(), json["patient"]["last_name"].ToString(), Convert.ToDateTime(json["patient"]["date_of_birth"]), json["document_payloads"].ToString(), json["token"].ToString());
             return Ok();
         }
-        [Route("api/public/v1/[controller]/{imageurl}")]
+        [Route("api/public/v1/[controller]/imageurl")]
         [HttpGet]
-        public ActionResult ConvertBase64image(string imageurl)
+        public ActionResult ConvertBase64image()
         {
             //string path = _hostingEnvironment.WebRootPath + "/images/" + fileName;
-            byte[] b = System.IO.File.ReadAllBytes("uploadimages/" + imageurl);
+            byte[] b = System.IO.File.ReadAllBytes(Request.Headers["imgurl"].ToString());
             string imageBytes = "data:image/png;base64," + Convert.ToBase64String(b);
             // Do something with the file content
 
