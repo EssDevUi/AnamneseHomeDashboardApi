@@ -3,6 +3,7 @@ using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels.AnamneseHome;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -47,7 +48,8 @@ namespace DashboardAPI.Controllers
             pr.loaded = false;
 
             model.practice = pr;
-
+            //byte[] b = System.IO.File.ReadAllBytes(practice.Logo);
+            //pr.logo_url = "data:image/png;base64," + Convert.ToBase64String(b);
             foreach (var item in templates)
             {
                 VorlagenForAnamneseHome vor = new VorlagenForAnamneseHome();

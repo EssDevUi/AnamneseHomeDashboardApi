@@ -1,12 +1,15 @@
 ﻿using ESS.Amanse.BLL.ICollection;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DashboardAPI.Controllers
 {
@@ -15,12 +18,10 @@ namespace DashboardAPI.Controllers
     {
         private readonly IPatient _Patient;
         private readonly IMedicalHistory _MedicalHistory;
-
         public anamnesis_flow_submissions(IPatient Patient, IMedicalHistory MedicalHistory)
         {
             _Patient = Patient;
             _MedicalHistory = MedicalHistory;
-
         }
         [Route("api/dashboard/v1/[controller]/{id}")]
         [HttpGet]
@@ -65,6 +66,16 @@ namespace DashboardAPI.Controllers
             var patientID = _MedicalHistory.CreateMedicalHistroy(json["patient"]["first_name"].ToString(), json["patient"]["last_name"].ToString(), Convert.ToDateTime(json["patient"]["date_of_birth"]), json["document_payloads"].ToString(), json["token"].ToString());
             return Ok();
         }
+        [Route("api/public/v1/[controller]/{imageurl}")]
+        [HttpGet]
+        public ActionResult ConvertBase64image(string imageurl)
+        {
+            //string path = _hostingEnvironment.WebRootPath + "/images/" + fileName;
+            byte[] b = System.IO.File.ReadAllBytes(imageurl);
+            string imageBytes= "data:image/png;base64," + Convert.ToBase64String(b);
+            // Do something with the file content
 
+            return Ok(imageBytes);
+        }
     }
 }
