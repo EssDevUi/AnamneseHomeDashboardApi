@@ -71,8 +71,8 @@ namespace DashboardAPI.Controllers
         public ActionResult ConvertBase64image(string imageurl)
         {
             //string path = _hostingEnvironment.WebRootPath + "/images/" + fileName;
-            byte[] b = System.IO.File.ReadAllBytes(imageurl);
-            string imageBytes= "data:image/png;base64," + Convert.ToBase64String(b);
+            byte[] b = System.IO.File.ReadAllBytes("uploadimages/" + imageurl);
+            string imageBytes = "data:image/png;base64," + Convert.ToBase64String(b);
             // Do something with the file content
 
             return Ok(imageBytes);
