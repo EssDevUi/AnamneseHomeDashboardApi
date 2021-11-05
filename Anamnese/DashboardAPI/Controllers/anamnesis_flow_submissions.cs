@@ -1,4 +1,5 @@
 ﻿using ESS.Amanse.BLL.ICollection;
+using ESS.Amanse.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -18,10 +20,14 @@ namespace DashboardAPI.Controllers
     {
         private readonly IPatient _Patient;
         private readonly IMedicalHistory _MedicalHistory;
-        public anamnesis_flow_submissions(IPatient Patient, IMedicalHistory MedicalHistory)
+        private readonly ICommons _Commons;
+
+        public anamnesis_flow_submissions(IPatient Patient, IMedicalHistory MedicalHistory, ICommons Commons)
         {
             _Patient = Patient;
             _MedicalHistory = MedicalHistory;
+            _Commons = Commons;
+
         }
         [Route("api/dashboard/v1/[controller]/{id}")]
         [HttpGet]
@@ -66,16 +72,42 @@ namespace DashboardAPI.Controllers
             var patientID = _MedicalHistory.CreateMedicalHistroy(json["patient"]["first_name"].ToString(), json["patient"]["last_name"].ToString(), Convert.ToDateTime(json["patient"]["date_of_birth"]), json["document_payloads"].ToString(), json["token"].ToString());
             return Ok();
         }
-        [Route("api/public/v1/[controller]/imageurl")]
+        [Route("api/public/v1/[controller]/imageonServer")]
         [HttpGet]
         public ActionResult ConvertBase64image()
         {
             //string path = _hostingEnvironment.WebRootPath + "/images/" + fileName;
-            byte[] b = System.IO.File.ReadAllBytes(Request.Headers["imgurl"].ToString());
+            byte[] b = System.IO.File.ReadAllBytes(Request.Headers["imageonServer"].ToString());
             string imageBytes = "data:image/png;base64," + Convert.ToBase64String(b);
             // Do something with the file content
 
             return Ok(imageBytes);
+        }
+        [Route("api/public/v1/[controller]/imageurl")]
+        [HttpGet]
+        public async Task<ActionResult> downloadAndConvertBase64image()
+        {
+            string imageBytes = "";
+            //string path = _hostingEnvironment.WebRootPath + "/images/" + fileName;
+            using (var client = new HttpClient())
+            {
+                var bytes = await client.GetByteArrayAsync(Request.Headers["imgurl"].ToString()); // there are other methods if you want to get involved with stream processing etc
+                imageBytes = "data:image/png;base64," + Convert.ToBase64String(bytes);
+                //return base64String;
+            }
+            //byte[] b = System.IO.File.ReadAllBytes(Request.Headers["imgurl"].ToString());
+            //string imageBytes = "data:image/png;base64," + Convert.ToBase64String(b);
+            // Do something with the file content
+
+            return Ok(imageBytes);
+        }
+        [Route("api/public/v1/[controller]/saveimage")]
+        [HttpPost]
+        public IActionResult SaveImage(practice_logoViewModel model)// use moel only to get image
+        {
+            Guid imageName = Guid.NewGuid();
+            model.Logo = _Commons.SaveImage(model.Logo.Replace("data:image/png;base64,", ""), imageName.ToString());
+            return Ok();
         }
     }
 }
