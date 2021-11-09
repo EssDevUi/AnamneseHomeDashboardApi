@@ -2,10 +2,10 @@ using ESS.Amanse.BLL.Collection;
 using ESS.Amanse.BLL.ICollection;
 using ESS.Amanse.DAL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +14,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.IO;
 using System.Text;
-using Wkhtmltopdf.NetCore;
 namespace DashboardAPI
 {
     public class Startup
@@ -47,12 +46,26 @@ namespace DashboardAPI
                                                           ).AllowAnyMethod().AllowAnyHeader();
                                   });
             });
-            //services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            //services.AddAuthentication(options =>
             //{
-            //    builder.AllowAnyOrigin()
-            //           .AllowAnyMethod()
-            //           .AllowAnyHeader();
-            //}));
+            //    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme).RequireAuthenticatedUser().Build();
+            //});
+            //services.AddAuthentication(au =>
+            //{
+            //    au.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    au.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //}).AddJwtBearer(jwt =>
+            //{
+            //    jwt.RequireHttpsMetadata = false;
+            //    jwt.SaveToken = true;
+            //    jwt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+            //    {
+            //        ValidateIssuerSigningKey = true,
+            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetValue<string>("JWTSecretKey"))),
+            //        ValidateIssuer = false,
+            //        ValidateAudience = false
+            //    };
+            //});
 
 
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
@@ -82,8 +95,11 @@ namespace DashboardAPI
                   {
                       ValidateIssuerSigningKey = true,
                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["Jwt:Key"])),
-                      ValidateIssuer = false,
-                      ValidateAudience = false,
+                      ValidateIssuer = true,
+                      ValidateAudience = true,
+                      ValidateLifetime = true,
+                      ValidIssuer = Configuration["Jwt:Issuer"],
+                      ValidAudience = Configuration["Jwt:Issuer"],
                   };
               });
 
