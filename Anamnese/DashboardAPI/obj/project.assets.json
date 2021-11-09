@@ -9329,19 +9329,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sqmdev3\\.nuget\\packages\\": {}
+    "C:\\Users\\Moavia computer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+      "projectUniqueName": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
       "projectName": "DashboardAPI",
-      "projectPath": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
-      "packagesPath": "C:\\Users\\sqmdev3\\.nuget\\packages\\",
-      "outputPath": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\obj\\",
+      "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
+      "packagesPath": "C:\\Users\\Moavia computer\\.nuget\\packages\\",
+      "outputPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sqmdev3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Moavia computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9355,8 +9355,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
-              "projectPath": "E:\\projects\\AnamneseDashbaordapigit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj"
+            "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj": {
+              "projectPath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\ESS.Amanse\\ESS.Amanse.csproj"
             }
           }
         }
@@ -9430,6 +9430,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.20, 3.1.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
