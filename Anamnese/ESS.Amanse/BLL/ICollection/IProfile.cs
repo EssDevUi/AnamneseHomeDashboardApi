@@ -10,5 +10,6 @@ namespace ESS.Amanse.BLL.ICollection
 
         MainProfile getProfileByID(long Id);
         string AddorUpdate(MainProfile Model);
+        bool loginUser(string username, string password);
     }
 }

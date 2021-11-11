@@ -1,4 +1,5 @@
 ﻿using ESS.Amanse.BLL.ICollection;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 namespace DashboardAPI.Controllers
 {
     [ApiController]
+    [Authorize]
     public class AnamneseLearning : ControllerBase
     {
         private readonly IPatient _Patient;

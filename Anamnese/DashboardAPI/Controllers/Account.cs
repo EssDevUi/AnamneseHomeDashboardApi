@@ -1,4 +1,5 @@
-﻿using ESS.Amanse.ViewModels;
+﻿using ESS.Amanse.BLL.ICollection;
+using ESS.Amanse.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -12,25 +13,29 @@ using System.Text;
 namespace DashboardAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     public class Account : ControllerBase
     {
         public IConfiguration _configuration;
-        public Account(IConfiguration config)
+        private readonly IProfile _Profile;
+        public Account(IConfiguration config, IProfile Profile)
         {
             _configuration = config;
+            _Profile = Profile;
+
         }
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult Login(AuthData model)
+        [Route("api/Login")]
+        public IActionResult Login([FromBody] AuthData model)
         {
             IActionResult response = Unauthorized();
             var user = AuthenticateUser(model);
 
             if (user != null)
             {
-                var tokenString = GenerateJSONWebToken(user);
+                var tokenString = GenerateJSONWebToken();
                 response = Ok(new { token = tokenString });
             }
 
@@ -42,13 +47,13 @@ namespace DashboardAPI.Controllers
 
             //Validate the User Credentials    
             //Demo Purpose, I have Passed HardCoded User Information    
-            if (login.UserName == "Jignesh")
+            if (_Profile.loginUser(login.UserName, login.Password))
             {
-                user = new AuthData { UserName = "Jignesh Trivedi", Password = "test.btest@gmail.com" };
+                user = new AuthData { UserName = login.UserName, Password = login.Password };
             }
             return user;
         }
-        private string GenerateJSONWebToken(AuthData userInfo)
+        private string GenerateJSONWebToken()
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -69,7 +74,7 @@ namespace DashboardAPI.Controllers
             //string username = HttpContext.Request.Headers["username"];
             //string password = HttpContext.Request.Headers["password"];
 
-            if (model.UserName == "test" && model.Password== "test")
+            if (model.UserName == "test" && model.Password == "test")
             {
                 var claims = new[] {
                     new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),

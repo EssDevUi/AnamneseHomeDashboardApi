@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ESS.Amanse.BLL.Collection
 {
-    public class Profile: Repository<MainProfile>, IProfile
+    public class Profile : Repository<MainProfile>, IProfile
     {
         public Profile(AmanseHomeContext context) : base(context)
         {
@@ -16,6 +16,18 @@ namespace ESS.Amanse.BLL.Collection
         public MainProfile getProfileByID(long Id)
         {
             return Find(x => x.ID == Id);
+        }
+        public bool loginUser(string username, string password)
+        {
+            var data=dbContext.tblMainProfile.Where(x => x.Email == username && x.Password == password).FirstOrDefault();
+            if (data != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public string AddorUpdate(MainProfile Model)
         {
