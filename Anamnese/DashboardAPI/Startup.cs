@@ -42,31 +42,11 @@ namespace DashboardAPI
                                           "http://localhost:3001",
                                           "https://anamnesedashboard.surge.sh",
                                           "https://anamnesehome.surge.sh",
-                                          "https://anamneseaditor.surge.sh"
+                                          "https://anamneseaditor.surge.sh",
+                                          "https://anamneselearning.surge.sh"
                                                           ).AllowAnyMethod().AllowAnyHeader();
                                   });
             });
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme).RequireAuthenticatedUser().Build();
-            //});
-            //services.AddAuthentication(au =>
-            //{
-            //    au.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    au.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(jwt =>
-            //{
-            //    jwt.RequireHttpsMetadata = false;
-            //    jwt.SaveToken = true;
-            //    jwt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-            //    {
-            //        ValidateIssuerSigningKey = true,
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetValue<string>("JWTSecretKey"))),
-            //        ValidateIssuer = false,
-            //        ValidateAudience = false
-            //    };
-            //});
-
 
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<AmanseHomeContext>(o => o.UseSqlServer(connectionString));
