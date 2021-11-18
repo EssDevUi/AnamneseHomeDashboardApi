@@ -31,6 +31,26 @@ namespace ESS.Amanse.BLL.Collection
             }).ToList();
             return List;
         }
+        public PatientViewModel GetPatientById(long patientId)
+        {
+            var data = dbContext.tblpatients.Where(x => x.Id == patientId).Select(x => new PatientViewModel
+            {
+                PatientID = x.Id,
+                //MedicalHistoryLink = x.,
+                FirstName = x.first_name,
+                SurName = x.last_name,
+                DateOFBirth = x.date_of_birth.ToShortDateString(),
+                ReceivedOn = x.last_submitted_at.ToString("MM/dd/yyyy hh:mm tt"),
+                PatientNumber = x.cellular_phone
+
+            }).FirstOrDefault();
+            return data;
+        }
+        public patients GetPatient(long patientId)
+        {
+            var data = dbContext.tblpatients.Where(x => x.Id == patientId).FirstOrDefault();
+            return data;
+        }
         //public long CreatePatientInAnamneseHome(string Fname, string Lname, DateTime DOB)
         //{
         //    patients patient = new patients();
@@ -52,7 +72,7 @@ namespace ESS.Amanse.BLL.Collection
 
         //        throw;
         //    }
-     
+
 
         //    return patient.Id;
         //}

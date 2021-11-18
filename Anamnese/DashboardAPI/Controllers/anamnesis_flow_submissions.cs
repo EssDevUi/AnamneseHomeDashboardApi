@@ -69,7 +69,7 @@ namespace DashboardAPI.Controllers
         {
             var data = Request.Headers["formData"];
             JObject json = JObject.Parse(data);
-            var patientID = _MedicalHistory.CreateMedicalHistroy(json["patient"]["first_name"].ToString(), json["patient"]["last_name"].ToString(), Convert.ToDateTime(json["patient"]["date_of_birth"]), json["document_payloads"].ToString(), json["token"].ToString());
+            var patientID = _MedicalHistory.CreateMedicalHistroy(0,json["patient"]["first_name"].ToString(), json["patient"]["last_name"].ToString(), Convert.ToDateTime(json["patient"]["date_of_birth"]), json["document_payloads"].ToString(), json["token"].ToString());
             return Ok();
         }
         [Route("api/public/v1/[controller]/imageonServer")]

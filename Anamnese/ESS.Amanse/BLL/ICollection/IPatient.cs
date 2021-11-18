@@ -10,6 +10,8 @@ namespace ESS.Amanse.BLL.ICollection
     public interface IPatient
     {
         IEnumerable<PatientViewModel> GetAllPatient();
+        PatientViewModel GetPatientById(long patientId);
+        patients GetPatient(long patientId);
         //long CreatePatientInAnamneseHome(string Fname, string Lname, DateTime DOB);
     }
 }

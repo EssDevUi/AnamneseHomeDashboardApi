@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -18,10 +19,13 @@ namespace DashboardAPI.Controllers
     {
         public IConfiguration _configuration;
         private readonly IProfile _Profile;
-        public Account(IConfiguration config, IProfile Profile)
+        private readonly IPractice _Practice;
+
+        public Account(IConfiguration config, IProfile Profile, IPractice Practice)
         {
             _configuration = config;
             _Profile = Profile;
+            _Practice = Practice;
 
         }
 
@@ -40,6 +44,19 @@ namespace DashboardAPI.Controllers
             }
 
             return response;
+        }
+        [Authorize]
+        [HttpPost]
+        [Route("api/checkPassword")]
+        public bool checkDangerZonePassword()
+        {
+
+            var practice = _Practice.getPractice(1);
+            if (practice != null)
+            {
+                return practice.DangerZonePassword.ToLower() == Request.Headers["passwordKey"].ToString().ToLower() ? true : false;
+            }
+            return false;
         }
         private AuthData AuthenticateUser(AuthData login)
         {

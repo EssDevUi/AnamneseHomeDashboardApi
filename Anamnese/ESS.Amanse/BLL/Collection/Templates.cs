@@ -29,7 +29,8 @@ namespace ESS.Amanse.BLL.Collection
                 template_category_id = x.CategoryID,
                 @default = x.@default,
                 id = x.id,
-                title = x.templates
+                title = x.templates,
+                languages=x.languages
             }).ToList();
         }
         public string AddtemplateInHomeLink(long templateId, long HomeLinkID)

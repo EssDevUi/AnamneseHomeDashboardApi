@@ -20,6 +20,9 @@ namespace ESS.Amanse.DAL
         public DateTime created_at { get; set; }
         public DateTime submitted_at { get; set; }
         public string patient_payload { get; set; }
+        [MaxLength(255)]
+        public string title { get; set; }
+        public bool IsInDraft { get; set; }
         [ForeignKey("pvs_patid")]
         public patients patient { get; set; }
     }
