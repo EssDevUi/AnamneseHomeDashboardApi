@@ -7,7 +7,9 @@ using ESS.Amanse.BLL.ICollection;
 using ESS.Amanse.BLL.Repo;
 using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels;
+using ESS.Amanse.ViewModels.AnamneseLearningViewModels;
 using ESS.Amanse.ViewModels.Vorlagen;
+using Newtonsoft.Json.Linq;
 
 namespace ESS.Amanse.BLL.Collection
 {
@@ -20,6 +22,16 @@ namespace ESS.Amanse.BLL.Collection
         public Vorlagen GetTemplateById(long TemplateID)
         {
             return dbContext.tblVorlagen.Find(TemplateID);
+        }
+        public List<document_templates> GetTemplateByIdForLearning(List<long> TemplateIDs)
+        {
+            return dbContext.tblVorlagen.Where(x => TemplateIDs.Contains(x.id)).Select(x => new document_templates
+            {
+                id = x.id,
+                atn = x.atn_v2,
+                languages = x.languages,
+                title =x.templates
+            }).ToList();
         }
 
         public List<VorlegenForEditHomeLinkViewModel> GetAllTemplatesC12()

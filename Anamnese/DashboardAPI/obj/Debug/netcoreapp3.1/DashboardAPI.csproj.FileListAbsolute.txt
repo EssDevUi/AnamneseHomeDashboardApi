@@ -1597,3 +1597,8 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardA
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.pdb
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.genruntimeconfig.cache
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\anamnese_home_flow.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\anamnesis_body.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\consultation_body.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\patient.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\practice.json

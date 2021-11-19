@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels;
+using ESS.Amanse.ViewModels.AnamneseLearningViewModels;
 using ESS.Amanse.ViewModels.Vorlagen;
 
 namespace ESS.Amanse.BLL.ICollection
@@ -24,5 +25,6 @@ namespace ESS.Amanse.BLL.ICollection
         string DeleteTemplates(long id);
         void Duplicate(TemplateDuplicateViewModel model);
         string AddorUpdate(Vorlagen Model);
+        List<document_templates> GetTemplateByIdForLearning(List<long> TemplateIDs);
     }
 }

@@ -4,6 +4,7 @@ using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels;
 using ESS.Amanse.ViewModels.AnamneseLearningViewModels;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,8 +56,10 @@ namespace ESS.Amanse.BLL.Collection
                 pvs_patid = x.patient.Id,
                 created_at = x.created_at,
                 submitted_at = x.date_of_birth,
-                document_payloads = x.patient_payload
+                patient_payload = x.patient,
+                payloadJson = x.patient_payload
             }).FirstOrDefault();
+            
         }
         public bool AssignPatientToMedicalHistroy(long historyid, long PatientID)
         {
@@ -74,13 +77,12 @@ namespace ESS.Amanse.BLL.Collection
             }
 
         }
-        public bool CreateMedicalHistroy(long PatientID, string Fname, string Lname, DateTime DOB, string payload, string token, bool isdrafted = false)
+        public bool CreateMedicalHistroy(string Fname, string Lname, DateTime DOB, string payload, string token, bool isdrafted = false)
         {
             ESS.Amanse.DAL.MedicalHistory history = new ESS.Amanse.DAL.MedicalHistory();
             try
             {
                 history.patient_payload = payload;
-                history.pvs_patid = PatientID;
                 history.first_name = Fname;
                 history.last_name = Lname;
                 history.date_of_birth = DOB;

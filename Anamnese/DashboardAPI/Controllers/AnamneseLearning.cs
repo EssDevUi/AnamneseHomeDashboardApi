@@ -104,19 +104,19 @@ namespace DashboardAPI.Controllers
             var patient = _Patient.GetPatientById(patientId);
             var data = Request.Headers["formData"];
             JObject json = JObject.Parse(data);
-            var patientID = _MedicalHistory.CreateMedicalHistroyAnamneseLearning(patient.PatientID,patient.FirstName, patient.SurName, Request.Headers["title"].ToString(), Convert.ToDateTime(patient.DateOFBirth), json["document_payloads"].ToString(), json["token"].ToString(), Convert.ToBoolean(Request.Headers["draft"]));
+            var patientID = _MedicalHistory.CreateMedicalHistroyAnamneseLearning(patient.PatientID, patient.FirstName, patient.SurName, Request.Headers["title"].ToString(), Convert.ToDateTime(patient.DateOFBirth), json["document_payloads"].ToString(), json["token"].ToString(), Convert.ToBoolean(Request.Headers["draft"]));
             return Ok();
         }
-        [Route("api/public/v1/[controller]/summary/{MedicalHistoryId}")]
-        [HttpPost]
-        public ActionResult Patientsummary(long MedicalHistoryId)
-        {
-            var history = _MedicalHistory.MedicalHistoryByIdForSummary(MedicalHistoryId);
-            var patient = JsonConvert.SerializeObject(_Patient.GetPatient(history.pvs_patid));
-            history.patient_payload = patient;
-            history.document_payloads= JsonConvert.SerializeObject(_Templates.GetTemplateById(long.Parse(history.token)));
-            return Ok();
-        }
+        //[Route("api/[controller]/summary/{MedicalHistoryId}")]
+        //[HttpPost]
+        //public ActionResult Patientsummary(long MedicalHistoryId)
+        //{
+        //    var history = _MedicalHistory.MedicalHistoryByIdForSummary(MedicalHistoryId);
+        //    //history.patient_payload = _Patient.GetPatient(history.pvs_patid);
+        //    //history.patient_payload = patient;
+        //    history.document_templates = _Templates.GetTemplateByIdForLearning(long.Parse(history.token));
+        //    return Ok(history);
+        //}
         [Route("api/[controller]/documents/{patientId}")]
         [HttpGet]
         public ActionResult Patientdocuments(long patientId)
