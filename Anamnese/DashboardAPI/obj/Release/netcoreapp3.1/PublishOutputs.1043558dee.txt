@@ -36,6 +36,11 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardA
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Athena Beratungsprotokolle\20 Beratungsbogen Craniomandibuläre Dysfunktion - Copy.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Athena Beratungsprotokolle\21 Aufklärungsdokumentation kombiniert festsitzend-herausnehmbarer Zahnersatz Custom.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\Athena Beratungsprotokolle\22 Beratungsbogen Craniomandibuläre Dysfunktion custom.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\atn\anamnese_home_flow.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\atn\anamnesis_body.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\atn\consultation_body.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\atn\patient.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\atn\practice.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\PatientsRecord\PatientsList.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Release\netcoreapp3.1\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
