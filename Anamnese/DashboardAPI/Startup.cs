@@ -102,6 +102,12 @@ namespace DashboardAPI
                 Path.Combine(Directory.GetCurrentDirectory(), "UploadImages")),
                 RequestPath = "/UploadImages"
             });
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+             Path.Combine(Directory.GetCurrentDirectory(), "html")),
+                RequestPath = "/html"
+            });
             //Enable directory browsing
             //app.UseDirectoryBrowser(new DirectoryBrowserOptions
             //{
