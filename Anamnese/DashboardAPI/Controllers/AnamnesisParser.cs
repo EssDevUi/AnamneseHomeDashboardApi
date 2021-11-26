@@ -1,4 +1,5 @@
 ﻿using ESS.Amanse.BLL.ICollection;
+using ESS.Amanse.Helper;
 using ESS.Amanse.ViewModels.AnamneseLearningViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Wkhtmltopdf.NetCore;
 
 namespace DashboardAPI.Controllers
 {
@@ -20,16 +22,19 @@ namespace DashboardAPI.Controllers
         private readonly ITemplates _Templates;
         private readonly IMedicalHistory _MedicalHistory;
         private readonly IWebHostEnvironment _WebHostEnvironment;
-        public AnamnesisParser(ITemplates Templates, IMedicalHistory MedicalHistory, IWebHostEnvironment WebHostEnvironment)
+        readonly IGeneratePdf _generatePdf;
+        public AnamnesisParser(ITemplates Templates, IMedicalHistory MedicalHistory, IGeneratePdf generatePdf, IWebHostEnvironment WebHostEnvironment)
         {
             _Templates = Templates;
             _MedicalHistory = MedicalHistory;
             _WebHostEnvironment = WebHostEnvironment;
+            _generatePdf = generatePdf;
+
         }
 
         [Route("api/[controller]/{MedicalHistoryId}")]
         [HttpGet]
-        public ActionResult GetPatientList(long MedicalHistoryId)
+        public async Task<ActionResult> GetPatientList(long MedicalHistoryId)
         {
             var history = _MedicalHistory.MedicalHistoryByIdForSummary(MedicalHistoryId);
             var payloadJsonObjectList = Newtonsoft.Json.Linq.JObject.Parse(history.payloadJson);
@@ -51,7 +56,26 @@ namespace DashboardAPI.Controllers
             history.document_templates = _Templates.GetTemplateByIdForLearning(templateIds);
             string BaseUrl = Request.Scheme + "://" + Request.Host.Value + "/";
             string file = parse_Anamnese_Flows(history, BaseUrl);
-            return Ok(file);
+            //Convert html to pdf
+            var Options = new ConvertOptions()
+            {
+                PageMargins = new Wkhtmltopdf.NetCore.Options.Margins()
+                {
+                    Top = 20,
+                    Bottom = 20,
+                    Left = 20,
+                    Right = 20
+                },
+                //FooterHtml = _WebHostEnvironment.ContentRootPath + "\\HtmlToPdf\\header.html",
+                FooterSpacing = 2,
+                PageSize = Wkhtmltopdf.NetCore.Options.Size.A4,
+
+            };
+            _generatePdf.SetConvertOptions(Options);
+            byte[] FileBytes = await _generatePdf.GetByteArray("/html/"+ file);
+            string filename = Common.UploadPdf(FileBytes, file);
+            //System.IO.Path.Combine("PatientsPdfForms", filename);
+            return Ok(System.IO.Path.Combine("PatientsPdfForms", filename));
         }
         public class document
         {
@@ -121,7 +145,7 @@ namespace DashboardAPI.Controllers
             stringbuilder.Append("<div style='clear: both;'></div></body></html>");
 
             System.IO.File.WriteAllText(System.IO.Path.Combine("html", title + ".html"), stringbuilder.ToString());
-            return System.IO.Path.Combine("html", title + ".html");
+            return title + ".html";
 
         }
 

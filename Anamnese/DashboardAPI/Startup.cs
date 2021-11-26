@@ -14,6 +14,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.IO;
 using System.Text;
+using Wkhtmltopdf.NetCore;
+
 namespace DashboardAPI
 {
     public class Startup
@@ -32,6 +34,7 @@ namespace DashboardAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string projectRootPath = _hostingEnvironment.ContentRootPath;
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
@@ -56,7 +59,7 @@ namespace DashboardAPI
             services.AddDbContext<AmanseHomeContext>(o => o.UseSqlServer(connectionString));
             services.AddAutoMapper(typeof(Startup));
 
-
+            services.AddWkhtmltopdf(projectRootPath + "\\Wkhtmltopdf");
             services.AddTransient<ITemplates, Templates>();
             services.AddTransient<IProfile, Profile>();
             services.AddTransient<ICommons, Commons>();
@@ -108,8 +111,8 @@ namespace DashboardAPI
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
-             Path.Combine(Directory.GetCurrentDirectory(), "html")),
-                RequestPath = "/html"
+             Path.Combine(Directory.GetCurrentDirectory(), "PatientsPdfForms")),
+                RequestPath = "/PatientsPdfForms"
             });
             //Enable directory browsing
             //app.UseDirectoryBrowser(new DirectoryBrowserOptions

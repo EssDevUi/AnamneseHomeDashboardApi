@@ -14,7 +14,21 @@ namespace ESS.Amanse.Helper
         //{
         //    _configuration = configuration;
         //}
+        public static string UploadPdf(byte[] pdfFile,string filename)
+        {
+            string path = "PatientsPdfForms";
+            if (!System.IO.Directory.Exists(path))
+            {
+                System.IO.Directory.CreateDirectory(path);
+            }
+            string uniqeFileName = filename + ".pdf";
+            string FilePath = Path.Combine(path, uniqeFileName);
+            File.WriteAllBytes(FilePath, pdfFile);
 
+
+            return uniqeFileName;
+
+        }
         public static String Encryption(string TextToBeEncrypted)
         {
             RijndaelManaged RijndaelCipher = new RijndaelManaged();

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cMcoYTr73tzff4Dijby+BZOXY7JU6ISllfO3fWm0/EialZMUgNdVvuZ1hLHfuVAJZZyuIe5QBzNd9y8F/ZpufA==",
+  "dgSpecHash": "DA/NvXw7rkSEt5BBjsidEqe00EoIdUyaY4m3/f91emJQ6DqdUsQGQPAl+FrR60nZ0zZFm4E509IKC6ssGR8YNg==",
   "success": true,
   "projectFilePath": "D:\\Enamnese\\AnamneseDashboardApiGit\\AnamneseHomeDashboardApi\\Anamnese\\DashboardAPI\\DashboardAPI.csproj",
   "expectedPackageFiles": [
@@ -198,8 +198,7 @@
     "C:\\Users\\Moavia computer\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\Moavia computer\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Moavia computer\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Moavia computer\\.nuget\\packages\\wkhtmltopdf.netcore\\3.0.2\\wkhtmltopdf.netcore.3.0.2.nupkg.sha512",
-    "C:\\Users\\Moavia computer\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
+    "C:\\Users\\Moavia computer\\.nuget\\packages\\wkhtmltopdf.netcore\\3.0.2\\wkhtmltopdf.netcore.3.0.2.nupkg.sha512"
   ],
   "logs": []
 }
