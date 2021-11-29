@@ -46,6 +46,21 @@ namespace ESS.Amanse.BLL.Collection
                 pvs_patid = x.patient.Id,
             }).FirstOrDefault();
         }
+        public bool DeleteMedicalHistoryById(long id)
+        {
+            try
+            {
+                var history = dbContext.tblMedicalHistory.Where(x => x.id == id).FirstOrDefault();
+                dbContext.Remove(history);
+                dbContext.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+           
+        }
         public DataForSummeryViewModel MedicalHistoryByIdForSummary(long id)
         {
             return dbContext.tblMedicalHistory.Include(x => x.patient).Where(x => x.id == id).Select(x => new DataForSummeryViewModel
@@ -59,7 +74,7 @@ namespace ESS.Amanse.BLL.Collection
                 patient_payload = x.patient,
                 payloadJson = x.patient_payload
             }).FirstOrDefault();
-            
+
         }
         public bool AssignPatientToMedicalHistroy(long historyid, long PatientID)
         {

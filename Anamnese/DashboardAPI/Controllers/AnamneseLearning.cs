@@ -149,7 +149,7 @@ namespace DashboardAPI.Controllers
                 var bytes = await client.GetByteArrayAsync(Request.Headers["imgurl"].ToString()); // there are other methods if you want to get involved with stream processing etc
                 imageBytes = "data:image/png;base64," + Convert.ToBase64String(bytes);
             }
-        
+
             return Ok(imageBytes);
         }
         [Route("api/v1/[controller]/saveimage")]
@@ -159,6 +159,20 @@ namespace DashboardAPI.Controllers
             Guid imageName = Guid.NewGuid();
             model.Logo = _Commons.SaveImage(model.Logo.Replace("data:image/png;base64,", ""), imageName.ToString());
             return Ok(model.Logo);
+        }
+        [Route("api/v1/[controller]/DeleteHistory/{medicalHistoryId}")]
+        [HttpPost]
+        public IActionResult DeleteHistory(long medicalHistoryId)
+        {
+            bool response = _MedicalHistory.DeleteMedicalHistoryById(medicalHistoryId);
+            if (response)
+            {
+                return Ok(response);
+            }
+            else
+            {
+                return Ok("Something went wrong...");
+            }
         }
     }
 }

@@ -16,5 +16,6 @@ namespace ESS.Amanse.BLL.ICollection
         DataForSummeryViewModel MedicalHistoryByIdForSummary(long id);
         bool CreateMedicalHistroyAnamneseLearning(long PatientID, string Fname, string Lname, string title, DateTime DOB, string payload, string token, bool isdrafted = false);
         List<DAL.MedicalHistory> MedicalHistoryByPatientId(long patientId);
+        bool DeleteMedicalHistoryById(long id);
     }
 }
