@@ -51,6 +51,12 @@ namespace ESS.Amanse.BLL.Collection
             var data = dbContext.tblpatients.Where(x => x.Id == patientId).FirstOrDefault();
             return data;
         }
+        public long CreatePatient(patients model)
+        {
+            dbContext.tblpatients.Add(model);
+            dbContext.SaveChanges();
+            return model.Id;
+        }
         //public long CreatePatientInAnamneseHome(string Fname, string Lname, DateTime DOB)
         //{
         //    patients patient = new patients();

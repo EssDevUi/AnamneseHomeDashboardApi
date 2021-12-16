@@ -1,4 +1,5 @@
 ﻿using ESS.Amanse.BLL.ICollection;
+using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels;
 using ESS.Amanse.ViewModels.AnamneseHome;
 using Microsoft.AspNetCore.Authorization;
@@ -65,6 +66,13 @@ namespace DashboardAPI.Controllers
         public IActionResult GetsystemAnamnesetemplate() //used for Anamnesesbogen catgory 1
         {
             var List = _Templates.GetAllTemplatesC12().Where(x => x.@default == true && x.template_category_id == 1).ToList();
+            return Ok(List);
+        }
+        [Route("api/[controller]/Anamnesebögen")]
+        [HttpGet]
+        public IActionResult GetAnamnesebögen() //used for all Anamnesesbogen catgory 1
+        {
+            var List = _Templates.GetAllTemplatesC12().Where(x => x.template_category_id == 1).ToList();
             return Ok(List);
         }
         [Route("api/v1/[controller]/{TemplateID}")]
@@ -173,6 +181,13 @@ namespace DashboardAPI.Controllers
             {
                 return Ok("Something went wrong...");
             }
+        }
+        [Route("api/v1/[controller]/createPatient")]
+        [HttpPost]
+        public IActionResult createPatient(patients model)
+        {
+            long PtId = _Patient.CreatePatient(model);
+            return Ok(PtId);
         }
     }
 }

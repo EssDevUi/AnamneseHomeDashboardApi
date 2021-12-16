@@ -12,6 +12,7 @@ namespace ESS.Amanse.BLL.ICollection
         IEnumerable<PatientViewModel> GetAllPatient();
         PatientViewModel GetPatientById(long patientId);
         patients GetPatient(long patientId);
+        long CreatePatient(patients model);
         //long CreatePatientInAnamneseHome(string Fname, string Lname, DateTime DOB);
     }
 }
