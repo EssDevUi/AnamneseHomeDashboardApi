@@ -25,7 +25,7 @@ namespace ESS.Amanse.BLL.Collection
 
                 throw;
             }
-    
+
         }
         public string AddorUpdate(practice Model)
         {
@@ -148,7 +148,7 @@ namespace ESS.Amanse.BLL.Collection
                     oldProfile.AllowPriviousEntry = Model.AllowPriviousEntry;
                     oldProfile.BlockingPassword = Model.BlockingPassword;
                     oldProfile.BugReports = Model.BugReports;
-                    oldProfile.BugReportTime = Convert.ToDateTime(Model.BugReportTime); 
+                    oldProfile.BugReportTime = Convert.ToDateTime(Model.BugReportTime);
                     oldProfile.sendanalyticsdata = Model.Sendanalyticsdata;
                     oldProfile.NavigateTo = Model.NavigateTo;
                     Update(oldProfile);
@@ -201,5 +201,27 @@ namespace ESS.Amanse.BLL.Collection
                 return ex.Message;
             }
         }
+        public bool Updateapp_options(app_optionsViewModel Model)
+        {
+            bool msg = false;
+            try
+            {
+                var oldProfile = Find(x => x.id == Model.Id);
+                oldProfile.AllowPriviousEntry = Model.AllowPriviousEntry;
+                oldProfile.BugReports = Model.BugReports;
+                oldProfile.sendanalyticsdata = Model.Sendanalyticsdata;
+                oldProfile.NavigateTo = Model.NavigateTo;
+                Update(oldProfile);
+                Save();
+                msg = true;
+
+                return msg;
+            }
+            catch (Exception ex)
+            {
+                return msg;
+            }
+        }
+
     }
 }

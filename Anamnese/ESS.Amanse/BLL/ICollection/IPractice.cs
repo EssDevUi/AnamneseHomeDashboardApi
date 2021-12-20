@@ -5,6 +5,7 @@ namespace ESS.Amanse.BLL.ICollection
 {
     public interface IPractice
     {
+        bool Updateapp_options(app_optionsViewModel Model);
         string AddorUpdate(practice Model);
         practice getPractice(long Id);
         string AddorUpdatepracticedata(practice_dataViewModel Model);

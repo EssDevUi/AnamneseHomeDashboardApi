@@ -23,13 +23,13 @@ namespace DashboardAPI.Controllers
         private readonly IMedicalHistory _MedicalHistory;
         private readonly IWebHostEnvironment _WebHostEnvironment;
         readonly IGeneratePdf _generatePdf;
+
         public AnamnesisParser(ITemplates Templates, IMedicalHistory MedicalHistory, IGeneratePdf generatePdf, IWebHostEnvironment WebHostEnvironment)
         {
             _Templates = Templates;
             _MedicalHistory = MedicalHistory;
             _WebHostEnvironment = WebHostEnvironment;
             _generatePdf = generatePdf;
-
         }
 
         [Route("api/[controller]/{MedicalHistoryId}")]
@@ -72,10 +72,11 @@ namespace DashboardAPI.Controllers
 
             };
             _generatePdf.SetConvertOptions(Options);
-            byte[] FileBytes = await _generatePdf.GetByteArray("/html/"+ file);
+
+            byte[] FileBytes = await _generatePdf.GetByteArray("/html/" + file);
             string filename = Common.UploadPdf(FileBytes, file);
-            //System.IO.Path.Combine("PatientsPdfForms", filename);
             return Ok(System.IO.Path.Combine("PatientsPdfForms", filename));
+            //System.IO.Path.Combine("PatientsPdfForms", filename);
         }
         public class document
         {
@@ -434,10 +435,10 @@ namespace DashboardAPI.Controllers
 
 
 
-        private static string parse_CameraInput(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload,string BaseUrl)
+        private static string parse_CameraInput(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload, string BaseUrl)
         {
             string source = (string)payload[(String)element["id"]];
-            if (source==null)
+            if (source == null)
             {
                 return "";
             }
@@ -460,7 +461,7 @@ namespace DashboardAPI.Controllers
         }
 
 
-        private static string parse_Signature(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload,string BaseUrl)
+        private static string parse_Signature(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload, string BaseUrl)
         {
             string source = (string)payload[(String)element["id"]];
             //string id = (string)element["id"];
@@ -477,7 +478,7 @@ namespace DashboardAPI.Controllers
                     "<div class='signature-box-inner'>" +
                         //"<div>" + practice_city + ", den " + started_at.ToShortDateString() +/*<%= @consultation.started_at.strftime('%d.%m.%Y') %>*/"</div>" +
 
-                        "<img src = " + BaseUrl+source + " class='signature'>" +
+                        "<img src = " + BaseUrl + source + " class='signature'>" +
 
                         "<div>" + signee + "</div>" +
                     "</div>" +

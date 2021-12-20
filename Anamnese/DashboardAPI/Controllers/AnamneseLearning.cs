@@ -22,13 +22,15 @@ namespace DashboardAPI.Controllers
         private readonly ITemplates _Templates;
         private readonly IMedicalHistory _MedicalHistory;
         private readonly ICommons _Commons;
+        private readonly IPractice _Practice;
 
-        public AnamneseLearning(IPatient Patient, ITemplates Templates, IMedicalHistory MedicalHistory, ICommons Commons)
+        public AnamneseLearning(IPatient Patient, ITemplates Templates, IMedicalHistory MedicalHistory, ICommons Commons, IPractice Practice)
         {
             _Patient = Patient;
             _Templates = Templates;
             _MedicalHistory = MedicalHistory;
             _Commons = Commons;
+            _Practice = Practice;
 
         }
         [Route("api/[controller]")]
@@ -117,7 +119,7 @@ namespace DashboardAPI.Controllers
             var data = Request.Headers["formData"];
             JObject json = JObject.Parse(data);
             var patientID = _MedicalHistory.CreateMedicalHistroyAnamneseLearning(patient.PatientID, patient.FirstName, patient.SurName, Request.Headers["title"].ToString(), Convert.ToDateTime(patient.DateOFBirth), json["document_payloads"].ToString(), json["token"].ToString(), Convert.ToBoolean(Request.Headers["draft"]));
-            return Ok();
+            return Ok(patientID);
         }
         //[Route("api/[controller]/summary/{MedicalHistoryId}")]
         //[HttpPost]
@@ -188,6 +190,20 @@ namespace DashboardAPI.Controllers
         {
             long PtId = _Patient.CreatePatient(model);
             return Ok(PtId);
+        }
+        [Route("api/v1/[controller]/get_app_options/{Id}")]
+        [HttpGet]
+        public IActionResult Getapp_options(long Id)
+        {
+            var data = _Practice.getPractice(Id);
+            return Ok(data);
+        }
+        [Route("api/v1/[controller]/app_options")]
+        [HttpPost]
+        public IActionResult Addapp_options(app_optionsViewModel model)
+        {
+            bool res = _Practice.Updateapp_options(model);
+            return Ok(res);
         }
     }
 }

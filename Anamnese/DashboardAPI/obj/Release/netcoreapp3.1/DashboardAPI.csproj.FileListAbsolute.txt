@@ -954,3 +954,6 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardA
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Release\netcoreapp3.1\atn\consultation_body.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Release\netcoreapp3.1\atn\patient.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Release\netcoreapp3.1\atn\practice.json
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Release\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Release\netcoreapp3.1\System.Web.Http.dll
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll
