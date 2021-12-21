@@ -115,9 +115,6 @@ namespace ESS.Amanse.BLL.Collection
 
                 return false;
             }
-
-
-
         }
         public bool CreateMedicalHistroyAnamneseLearning(long PatientID, string Fname, string Lname, string title, DateTime DOB, string payload, string token, bool isdrafted = false)
         {

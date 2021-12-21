@@ -39,8 +39,14 @@ namespace DashboardAPI.Controllers
 
             if (user != null)
             {
+                var set = _Practice.getPractice(1);
+                app_optionsViewModel setting = new app_optionsViewModel();
+                if (set!=null)
+                {
+                    setting.NavigateTo = set.NavigateTo;
+                }
                 var tokenString = GenerateJSONWebToken();
-                response = Ok(new { token = tokenString });
+                response = Ok(new { token = tokenString, setting = setting });
             }
 
             return response;
@@ -84,36 +90,36 @@ namespace DashboardAPI.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        [Route("api/[controller]")]
-        [HttpPost]
-        public IActionResult JWTLogin(AuthData model)
-        {
-            //string username = HttpContext.Request.Headers["username"];
-            //string password = HttpContext.Request.Headers["password"];
+        //[Route("api/[controller]")]
+        //[HttpPost]
+        //public IActionResult JWTLogin(AuthData model)
+        //{
+        //    //string username = HttpContext.Request.Headers["username"];
+        //    //string password = HttpContext.Request.Headers["password"];
 
-            if (model.UserName == "test" && model.Password == "test")
-            {
-                var claims = new[] {
-                    new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                    new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                    new Claim("username", model.UserName),
-                    new Claim("password", model.Password),
-                   };
+        //    if (model.UserName == "test" && model.Password == "test")
+        //    {
+        //        var claims = new[] {
+        //            new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
+        //            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        //            new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
+        //            new Claim("username", model.UserName),
+        //            new Claim("password", model.Password),
+        //           };
 
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+        //        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
 
-                var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        //        var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-                var token = new JwtSecurityToken(_configuration["Jwt:Issuer"], _configuration["Jwt:Audience"], claims, expires: DateTime.UtcNow.AddDays(1), signingCredentials: signIn);
+        //        var token = new JwtSecurityToken(_configuration["Jwt:Issuer"], _configuration["Jwt:Audience"], claims, expires: DateTime.UtcNow.AddDays(1), signingCredentials: signIn);
 
-                return Ok(new JwtSecurityTokenHandler().WriteToken(token));
-            }
-            else
-            {
-                return BadRequest("Invalid credentials");
-            }
+        //        return Ok(new JwtSecurityTokenHandler().WriteToken(token));
+        //    }
+        //    else
+        //    {
+        //        return BadRequest("Invalid credentials");
+        //    }
 
-        }
+        //}
     }
 }

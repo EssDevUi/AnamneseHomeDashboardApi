@@ -22,5 +22,12 @@ namespace ESS.Amanse.BLL.Collection
                         select Templates).ToList();
             return data;
         }
+        public List<Vorlagen> GetAllTemplateByIDs(List<long> TemplateIds)
+        {
+            var data = (from Templates in dbContext.tblVorlagen.ToList()
+                        where TemplateIds.Contains(Templates.id)
+                        select Templates).ToList();
+            return data;
+        }
     }
 }
