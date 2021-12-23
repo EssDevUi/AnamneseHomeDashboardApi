@@ -3,6 +3,7 @@ using ESS.Amanse.BLL.Repo;
 using ESS.Amanse.DAL;
 using ESS.Amanse.ViewModels;
 using ESS.Amanse.ViewModels.AnamneseLearningViewModels;
+using ESS.Amanse.ViewModels.Patient;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using System;
@@ -59,7 +60,7 @@ namespace ESS.Amanse.BLL.Collection
             {
                 return false;
             }
-           
+
         }
         public DataForSummeryViewModel MedicalHistoryByIdForSummary(long id)
         {
@@ -115,6 +116,70 @@ namespace ESS.Amanse.BLL.Collection
 
                 return false;
             }
+        }
+        public long CreatePatientMedicalHistroy(Root Pobj, string payload, string token, bool isdrafted = false)
+        {
+            try
+            {
+                patients model = new patients();
+                model.address1 = Pobj.patient.address1;
+                model.address2 = Pobj.patient.address2;
+                model.cellular_phone = Pobj.patient.cellular_phone;
+                model.city = Pobj.patient.city;
+                model.country = Pobj.patient.country;
+                model.created_at = DateTime.Now;
+                model.date_of_birth = Pobj.patient.date_of_birth;
+                model.email = Pobj.patient.email;
+                model.fax = Pobj.patient.fax;
+                model.first_name = Pobj.patient.first_name;
+                model.gender = Pobj.patient.gender;
+                model.home_phone = Pobj.patient.home_phone;
+                model.insurance_status = Pobj.patient.insurance_status;
+                model.insured_address1 = Pobj.patient.insured_address1;
+                model.insured_address2 = Pobj.patient.insured_address2;
+                model.insured_city = Pobj.patient.insured_city;
+                model.insured_country = Pobj.patient.insured_country;
+                model.insured_date_of_birth = Pobj.patient.insured_date_of_birth;
+                model.insured_first_name = Pobj.patient.insured_first_name;
+                model.insured_last_name = Pobj.patient.insured_last_name;
+                model.insured_phone = Pobj.patient.insured_phone;
+                model.insured_salutation = Pobj.patient.insured_salutation;
+                model.insured_title = Pobj.patient.insured_title;
+                model.insured_zipcode = Pobj.patient.insured_zipcode;
+                model.last_name = Pobj.patient.last_name;
+                model.last_submitted_at = DateTime.Now;
+                model.salutation = Pobj.patient.salutation;
+                model.title = Pobj.patient.title;
+                model.zipcode = Pobj.patient.zipcode;
+
+                dbContext.tblpatients.Add(model);
+                dbContext.SaveChanges();
+
+
+                ESS.Amanse.DAL.MedicalHistory history = new ESS.Amanse.DAL.MedicalHistory();
+
+                history.patient_payload = payload;
+                history.first_name = Pobj.patient.first_name;
+                history.last_name = Pobj.patient.last_name;
+                history.date_of_birth = Pobj.patient.date_of_birth;
+                history.submitted_at = DateTime.Now;
+                history.created_at = DateTime.Now;
+                history.practice_id = 1;
+                history.token = token;
+                history.IsInDraft = isdrafted;
+                history.pvs_patid = model.Id;
+                dbContext.tblMedicalHistory.Update(history);
+                dbContext.SaveChanges();
+
+
+                return model.Id;
+            }
+            catch (Exception e)
+            {
+
+                return 0;
+            }
+
         }
         public bool CreateMedicalHistroyAnamneseLearning(long PatientID, string Fname, string Lname, string title, DateTime DOB, string payload, string token, bool isdrafted = false)
         {

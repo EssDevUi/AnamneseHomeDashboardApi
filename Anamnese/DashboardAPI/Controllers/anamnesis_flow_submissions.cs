@@ -1,5 +1,6 @@
 ﻿using ESS.Amanse.BLL.ICollection;
 using ESS.Amanse.ViewModels;
+using ESS.Amanse.ViewModels.Patient;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,12 +22,14 @@ namespace DashboardAPI.Controllers
         private readonly IPatient _Patient;
         private readonly IMedicalHistory _MedicalHistory;
         private readonly ICommons _Commons;
+        private readonly IPractice _Practice;
 
-        public anamnesis_flow_submissions(IPatient Patient, IMedicalHistory MedicalHistory, ICommons Commons)
+        public anamnesis_flow_submissions(IPatient Patient, IMedicalHistory MedicalHistory, ICommons Commons, IPractice Practice)
         {
             _Patient = Patient;
             _MedicalHistory = MedicalHistory;
             _Commons = Commons;
+            _Practice = Practice;
 
         }
         [Route("api/dashboard/v1/[controller]/{id}")]
@@ -71,6 +74,23 @@ namespace DashboardAPI.Controllers
             JObject json = JObject.Parse(data);
             var patientID = _MedicalHistory.CreateMedicalHistroy(json["patient"]["first_name"].ToString(), json["patient"]["last_name"].ToString(), Convert.ToDateTime(json["patient"]["date_of_birth"]), json["document_payloads"].ToString(), json["token"].ToString());
             return Ok();
+        }
+        [Route("api/public/v1/[controller]/PatientDetail")]
+        [HttpPost]
+        public ActionResult PatientDetailForm()
+        {
+            var data = Request.Headers["formData"];
+            var obj = JsonConvert.DeserializeObject<Root>(data);
+            JObject json = JObject.Parse(data);
+            long patientid = _MedicalHistory.CreatePatientMedicalHistroy(obj, json["document_payloads"].ToString(), json["token"].ToString());
+            if (patientid > 0)
+            {
+                return Ok(new { navigateto = _Practice.getPractice(1).NavigateTo, ptid = patientid });
+            }
+            else
+            {
+                return Ok(patientid);
+            }
         }
         [Route("api/public/v1/[controller]/imageonServer")]
         [HttpGet]

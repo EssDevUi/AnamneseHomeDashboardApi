@@ -1,22 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace ESS.Amanse.DAL
+namespace ESS.Amanse.ViewModels.Patient
 {
-    [Table("tblpatients")]
-
-    public class patients
+    public class Patient
     {
-        public patients()
-        {
-            rejected_in_ds_win = false;
-            waiting_for_documents = false;
-        }
-        [Key]
-        public long Id { get; set; }
         [MaxLength(255)]
         public string first_name { get; set; }
         [MaxLength(255)]
@@ -49,33 +39,7 @@ namespace ESS.Amanse.DAL
         [MaxLength(255)]
         public string email { get; set; }
         [MaxLength(255)]
-        public string kknr { get; set; }
-        [MaxLength(255)]
-        public string policy_number { get; set; }
-        [MaxLength(255)]
         public string insurance_status { get; set; }
-        [MaxLength(255)]
-        public string employer { get; set; }
-        [MaxLength(255)]
-        public string profession { get; set; }
-        [MaxLength(255)]
-        public string pvs_patid { get; set; }
-        [MaxLength(255)]
-        public string pvs_name { get; set; }
-        [MaxLength(255)]
-        public string prxnr { get; set; }
-        [MaxLength(255)]
-        public string doctor { get; set; }
-        public DateTime last_visit { get; set; }
-        public DateTime first_displayed_at { get; set; }
-        public DateTime? created_at { get; set; }
-        public DateTime? updated_at { get; set; }
-        public string ds_patid { get; set; }
-        public string ds_patnr { get; set; }
-        public DateTime last_submitted_at { get; set; }
-        public int position { get; set; }
-        public string temporary_pat_id { get; set; }
-        public bool? rejected_in_ds_win { get; set; }
         public string insured_salutation { get; set; }
         public string insured_title { get; set; }
         public string insured_first_name { get; set; }
@@ -87,8 +51,11 @@ namespace ESS.Amanse.DAL
         public string insured_city { get; set; }
         public string insured_country { get; set; }
         public string insured_phone { get; set; }
-        public string recall { get; set; }
-        public string recall_to { get; set; }
-        public bool? waiting_for_documents { get; set; }
+       
+    }
+    public class Root
+    {
+        public Patient patient { get; set; }
+       
     }
 }

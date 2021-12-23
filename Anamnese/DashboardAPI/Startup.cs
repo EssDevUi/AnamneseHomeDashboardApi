@@ -50,7 +50,8 @@ namespace DashboardAPI
                                           "https://anamnesedashboard.surge.sh",
                                           "https://anamnesehome.surge.sh",
                                           "https://anamneseaditor.surge.sh",
-                                          "https://anamneselearning.surge.sh"
+                                          "https://anamneselearning.surge.sh",
+                                          "https://anamnesehomeextended.surge.sh"
                                                           ).AllowAnyMethod().AllowAnyHeader();
                                   });
             });

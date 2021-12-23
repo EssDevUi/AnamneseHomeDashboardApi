@@ -1,6 +1,7 @@
 ﻿using ESS.Amanse.BLL.Collection;
 using ESS.Amanse.ViewModels;
 using ESS.Amanse.ViewModels.AnamneseLearningViewModels;
+using ESS.Amanse.ViewModels.Patient;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,7 @@ namespace ESS.Amanse.BLL.ICollection
 {
     public interface IMedicalHistory
     {
+        long CreatePatientMedicalHistroy(Root patient, string payload, string token, bool isdrafted = false);
         List<MedicalHistoryViewModel> MedicalHistoryList();
         MedicalHistoryViewModel MedicalHistoryById(long id);
         bool AssignPatientToMedicalHistroy(long historyid, long PatientID);
