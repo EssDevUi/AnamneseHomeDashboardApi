@@ -205,5 +205,12 @@ namespace DashboardAPI.Controllers
             bool res = _Practice.Updateapp_options(model);
             return Ok(res);
         }
+        [Route("api/[controller]/patientDetail/{patientid}")]
+        [HttpGet]
+        public IActionResult getpatientDetail(long patientid)
+        {
+            var data = _Patient.GetPatientById(patientid);
+            return Ok(data);
+        }
     }
 }

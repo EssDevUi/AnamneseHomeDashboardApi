@@ -129,5 +129,6 @@ namespace DashboardAPI.Controllers
             model.Logo = _Commons.SaveImage(model.Logo.Replace("data:image/png;base64,", ""), imageName.ToString());
             return Ok(model.Logo);
         }
+       
     }
 }

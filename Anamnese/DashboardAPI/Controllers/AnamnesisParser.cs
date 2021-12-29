@@ -54,6 +54,10 @@ namespace DashboardAPI.Controllers
                 }
             }
             history.document_templates = _Templates.GetTemplateByIdForLearning(templateIds);
+            if (history.document_templates.Count == 0)
+            {
+                return Ok("Empty");
+            }
             string BaseUrl = Request.Scheme + "://" + Request.Host.Value + "/";
             string file = parse_Anamnese_Flows(history, BaseUrl);
             //Convert html to pdf
