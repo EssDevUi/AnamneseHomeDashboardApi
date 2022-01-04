@@ -80,7 +80,7 @@ namespace ESS.Amanse.DAL
         public string insured_title { get; set; }
         public string insured_first_name { get; set; }
         public string insured_last_name { get; set; }
-        public DateTime insured_date_of_birth { get; set; }
+        public DateTime? insured_date_of_birth { get; set; }
         public string insured_address1 { get; set; }
         public string insured_address2 { get; set; }
         public string insured_zipcode { get; set; }

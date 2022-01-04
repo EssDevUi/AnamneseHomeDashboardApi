@@ -82,7 +82,7 @@ namespace DashboardAPI.Controllers
             var data = Request.Headers["formData"];
             var obj = JsonConvert.DeserializeObject<Root>(data);
             JObject json = JObject.Parse(data);
-            long patientid = _MedicalHistory.CreatePatientMedicalHistroy(obj, json["document_payloads"].ToString(), json["token"].ToString());
+            long patientid = _MedicalHistory.CreatePatientMedicalHistroy(obj, json["document_payloads"].ToString(), json["token"]?.ToString());
             if (patientid > 0)
             {
                 return Ok(new { navigateto = _Practice.getPractice(1).NavigateTo, ptid = patientid });

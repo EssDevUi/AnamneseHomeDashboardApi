@@ -4,14 +4,16 @@ using ESS.Amanse.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ESS.Amanse.Migrations
 {
     [DbContext(typeof(AmanseHomeContext))]
-    partial class AmanseHomeContextModelSnapshot : ModelSnapshot
+    [Migration("20220104054007_update patient table")]
+    partial class updatepatienttable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

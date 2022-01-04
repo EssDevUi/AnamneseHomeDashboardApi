@@ -155,22 +155,24 @@ namespace ESS.Amanse.BLL.Collection
                 dbContext.tblpatients.Add(model);
                 dbContext.SaveChanges();
 
+                if (token != null)
+                {
+                    ESS.Amanse.DAL.MedicalHistory history = new ESS.Amanse.DAL.MedicalHistory();
 
-                ESS.Amanse.DAL.MedicalHistory history = new ESS.Amanse.DAL.MedicalHistory();
+                    history.patient_payload = payload;
+                    history.first_name = Pobj.patient.first_name;
+                    history.last_name = Pobj.patient.last_name;
+                    history.date_of_birth = Pobj.patient.date_of_birth;
+                    history.submitted_at = DateTime.Now;
+                    history.created_at = DateTime.Now;
+                    history.practice_id = 1;
+                    history.token = token;
+                    history.IsInDraft = isdrafted;
+                    history.pvs_patid = model.Id;
+                    dbContext.tblMedicalHistory.Update(history);
+                    dbContext.SaveChanges();
 
-                history.patient_payload = payload;
-                history.first_name = Pobj.patient.first_name;
-                history.last_name = Pobj.patient.last_name;
-                history.date_of_birth = Pobj.patient.date_of_birth;
-                history.submitted_at = DateTime.Now;
-                history.created_at = DateTime.Now;
-                history.practice_id = 1;
-                history.token = token;
-                history.IsInDraft = isdrafted;
-                history.pvs_patid = model.Id;
-                dbContext.tblMedicalHistory.Update(history);
-                dbContext.SaveChanges();
-
+                }
 
                 return model.Id;
             }

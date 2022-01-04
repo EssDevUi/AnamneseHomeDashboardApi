@@ -39,7 +39,7 @@ namespace DashboardAPI.Controllers
             pr.city = practice.City;
             pr.email = practice.Email;
             pr.phone = practice.Phone;
-            pr.logo_url =  practice.Logo;
+            pr.logo_url = practice.Logo;
             pr.website = practice.Website;
             pr.dgsvo_data_protection_officer_address = "";
             pr.dgsvo_data_protection_officer_contact = "";
@@ -68,6 +68,7 @@ namespace DashboardAPI.Controllers
         [HttpGet]
         public IActionResult getemplates(string templatesIds)
         {
+
             var ids = templatesIds.Split(",").Select(long.Parse).ToList();
             PatientFormViewModel model = new PatientFormViewModel();
             model.document_templates = new List<VorlagenForAnamneseHome>();
@@ -104,6 +105,8 @@ namespace DashboardAPI.Controllers
                 model.document_templates.Add(vor);
             }
             return Ok(model);
+
+
         }
 
     }
