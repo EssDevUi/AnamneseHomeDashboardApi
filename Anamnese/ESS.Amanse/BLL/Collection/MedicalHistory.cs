@@ -183,6 +183,39 @@ namespace ESS.Amanse.BLL.Collection
             }
 
         }
+        public long CreateExistingPatientMedicalHistroy(long PtID, string payload, string token, bool isdrafted = false)
+        {
+            try
+            {
+                var patient = dbContext.tblpatients.FirstOrDefault(x => x.Id == PtID);
+                if (token != null)
+                {
+                    ESS.Amanse.DAL.MedicalHistory history = new ESS.Amanse.DAL.MedicalHistory();
+
+                    history.patient_payload = payload;
+                    history.first_name = patient.first_name;
+                    history.last_name = patient.last_name;
+                    history.date_of_birth = patient.date_of_birth;
+                    history.submitted_at = DateTime.Now;
+                    history.created_at = DateTime.Now;
+                    history.practice_id = 1;
+                    history.token = token;
+                    history.IsInDraft = isdrafted;
+                    history.pvs_patid = PtID;
+                    dbContext.tblMedicalHistory.Update(history);
+                    dbContext.SaveChanges();
+
+                }
+
+                return PtID;
+            }
+            catch (Exception e)
+            {
+
+                return 0;
+            }
+
+        }
         public bool CreateMedicalHistroyAnamneseLearning(long PatientID, string Fname, string Lname, string title, DateTime DOB, string payload, string token, bool isdrafted = false)
         {
             ESS.Amanse.DAL.MedicalHistory history = new ESS.Amanse.DAL.MedicalHistory();

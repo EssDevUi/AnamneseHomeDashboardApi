@@ -415,7 +415,7 @@ namespace DashboardAPI.Controllers
                 string option_value = (string)payload[option_id];
 
                 string option_label = (string)option["label"]["de"];
-                if (option_value.ToLower() == "true")
+                if (option_value?.ToLower() == "true")
                 {
 
                     result += "<div class='option" + /*" input-highlighted" +*/ "'><span class='text-muted'>&#10004;</span>";

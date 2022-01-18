@@ -10,6 +10,7 @@ namespace ESS.Amanse.BLL.ICollection
 {
     public interface IMedicalHistory
     {
+        long CreateExistingPatientMedicalHistroy(long PtID, string payload, string token, bool isdrafted = false);
         long CreatePatientMedicalHistroy(Root patient, string payload, string token, bool isdrafted = false);
         List<MedicalHistoryViewModel> MedicalHistoryList();
         MedicalHistoryViewModel MedicalHistoryById(long id);

@@ -47,6 +47,8 @@ namespace DashboardAPI
                                           "https://localhost:3002",
                                           "https://localhost:3001",
                                           "http://localhost:3001",
+                                          "https://localhost:3003",
+                                          "http://localhost:3003",
                                           "https://anamnesedashboard.surge.sh",
                                           "https://anamnesehome.surge.sh",
                                           "https://anamneseaditor.surge.sh",

@@ -92,6 +92,23 @@ namespace DashboardAPI.Controllers
                 return Ok(patientid);
             }
         }
+        [Route("api/public/v1/[controller]/PatientTemplate/{patid}")]
+        [HttpPost]
+        public ActionResult TemplateagaindtPatientID(long patid)
+        {
+            var data = Request.Headers["formData"];
+            //var obj = JsonConvert.DeserializeObject<Root>(data);
+            JObject json = JObject.Parse(data);
+            long patientid = _MedicalHistory.CreateExistingPatientMedicalHistroy(patid, json["document_payloads"].ToString(), json["token"]?.ToString());
+            if (patientid > 0)
+            {
+                return Ok(new { navigateto = _Practice.getPractice(1).NavigateTo, ptid = patientid });
+            }
+            else
+            {
+                return Ok(patientid);
+            }
+        }
         [Route("api/public/v1/[controller]/imageonServer")]
         [HttpGet]
         public ActionResult ConvertBase64image()
