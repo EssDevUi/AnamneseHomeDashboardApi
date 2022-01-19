@@ -1119,44 +1119,8 @@ D:\Enamnese\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.pdb
 D:\Enamnese\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.genruntimeconfig.cache
 D:\Enamnese\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\Enamnese\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\anamnesis_at_home_flows\Atheno.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\anamnesis_flow_submissions\anamnese_flow_submition_detail.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\api_-_dashboard_-_v1_-_anamnesis_flow_submissions\api_-_dashboard_-_v1_-_anamnesis_flow_submissions_-_20975_GET.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\appsettings.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\01 Anamnesebogen Erwachsene (Deutsch).json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\02 Anamnesebogen Erwachsene (Englisch).json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\03 Patienteninformation zum Datenschutz (Deutsch).json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\04 Datenschutzrechtliche Einwilligungserklärung (Deutsch).json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\05 Anamnesebogen Erwachsene.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\06 Datenschutzrechtliche Einwilligungserklärung.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\07 Patienteninformation zum Datenschutz - Copy.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\08 Besondere Gesundheitsfragen bezüglich COVID-19 - Copy.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\09 Besondere Gesundheitsfragen bezüglich COVID-19 Custom.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Aufklärungsbögen\10 Patienteninformation zum Datenschutz Custom.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\01 Blanko Aufklärungsbogen.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\02 Beratungsprotokoll Prophylaxe.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\03 Beratung mit leerer Seite zum Bemalen.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\04 Aufklärung Implantat OP.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\05 Aufklärungsdokumentation Lokalanästhesie.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\06 Aufklärungsdokumentation Knochenblock OP.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\06 Aufklärungsdokumentation Wurzelspitzenresektion.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\07 Aufklärungsdokumentation Extraktion.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\08 Aufklärungsdokumentation Weisheitszahnentfernung.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\09 Aufklärungsdokumentation Wurzelkanalbehandlung.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\10 Aufklärungsdokumentation Versiegelung.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\11 Aufklärungsdokumentation Brücke.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\12 Aufklärungsdokumentation Sinuslift.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\13 Aufklärungsdokumentation Kronenversorgung.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\14 Aufklärungsdokumentation Inlay.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\15 Aufklärungsdokumentation Parodontitis-Chirurgie.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\17 Aufklärungsdokumentation Füllung.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\18 Aufklärungsdokumentation Provisorien.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\19 Aufklärungsdokumentation kombiniert festsitzend-herausnehmbarer Zahnersatz - Copy.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\20 Beratungsbogen Craniomandibuläre Dysfunktion - Copy.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\21 Aufklärungsdokumentation kombiniert festsitzend-herausnehmbarer Zahnersatz Custom.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Athena Beratungsprotokolle\22 Beratungsbogen Craniomandibuläre Dysfunktion custom.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\PatientsRecord\PatientsList.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\DashboardAPI.exe
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\DashboardAPI.deps.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\DashboardAPI.runtimeconfig.json
@@ -1597,11 +1561,11 @@ D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardA
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.pdb
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.genruntimeconfig.cache
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\obj\Debug\netcoreapp3.1\DashboardAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\anamnese_home_flow.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\anamnesis_body.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\consultation_body.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\patient.json
 D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\atn\practice.json
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\System.Web.Http.dll
-D:\Enamnese\AnamneseDashboardApiGit\AnamneseHomeDashboardApi\Anamnese\DashboardAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

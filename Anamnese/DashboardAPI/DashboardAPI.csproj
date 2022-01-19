@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="athenabox_documents\athenabox_documents_get.json" />
+    <Compile Remove="Common\**" />
+    <Content Remove="Common\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <None Remove="Common\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,14 +39,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="html\" />
     <Folder Include="PatientsPdfForms\" />
-    <Folder Include="UploadImages\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="athenabox_documents\athenabox_documents_get.json" />
+    <None Include="wwwroot\assets\img\Video_player_image.png" />
   </ItemGroup>
 
 

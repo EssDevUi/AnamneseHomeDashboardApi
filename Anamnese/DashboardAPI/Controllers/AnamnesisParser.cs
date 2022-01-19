@@ -59,7 +59,7 @@ namespace DashboardAPI.Controllers
                 return Ok("Empty");
             }
             string BaseUrl = Request.Scheme + "://" + Request.Host.Value + "/";
-            string file = parse_Anamnese_Flows(history, BaseUrl);
+            List<string> Htmlfiles = parse_Anamnese_Flows(history, BaseUrl);
             //Convert html to pdf
             var Options = new ConvertOptions()
             {
@@ -76,10 +76,14 @@ namespace DashboardAPI.Controllers
 
             };
             _generatePdf.SetConvertOptions(Options);
-
-            byte[] FileBytes = await _generatePdf.GetByteArray("/html/" + file);
-            string filename = Common.UploadPdf(FileBytes, file);
-            return Ok(System.IO.Path.Combine("PatientsPdfForms", filename));
+            List<string> filename = new List<string>();
+            foreach (var file in Htmlfiles)
+            {
+                byte[] FileBytes = await _generatePdf.GetByteArray("/html/" + file);
+                filename.Add(System.IO.Path.Combine("PatientsPdfForms", Common.UploadPdf(FileBytes, file)));
+            }
+           
+            return Ok(JsonConvert.SerializeObject(filename));
             //System.IO.Path.Combine("PatientsPdfForms", filename);
         }
         public class document
@@ -88,7 +92,7 @@ namespace DashboardAPI.Controllers
             public Newtonsoft.Json.Linq.JObject template { get; set; }
         }
 
-        public static string parse_Anamnese_Flows(DataForSummeryViewModel model, string BaseUrl)
+        public static List<string> parse_Anamnese_Flows(DataForSummeryViewModel model, string BaseUrl)
         {
 
             Newtonsoft.Json.Linq.JArray document_payloads = Newtonsoft.Json.Linq.JArray.Parse(JsonConvert.SerializeObject(model.document_payloads));
@@ -125,12 +129,12 @@ namespace DashboardAPI.Controllers
                     documents.Add(anamnese_home_flow);
                 }
             }
-            string file = "";
+            List<string> files = new List<string>();
             foreach (document doc in documents)
             {
-                file = parse_Anamnese_Flow(doc, BaseUrl);
+                files.Add(parse_Anamnese_Flow(doc, BaseUrl));
             }
-            return file;
+            return files;
         }
 
         private static string parse_Anamnese_Flow(document doc, string BaseUrl)
@@ -193,7 +197,7 @@ namespace DashboardAPI.Controllers
                 case "image":
                     return parse_Image(element, payload, BaseUrl);
                 case "video":
-                    return parse_Video(element, payload);
+                    return parse_Video(element, payload, BaseUrl);
 
                 case "textInput":
                     return parse_TextInput(element, payload);
@@ -298,6 +302,7 @@ namespace DashboardAPI.Controllers
         {
             //string source = (string)element["source"];
             string source = (string)payload[(String)element["id"]];
+            bool isonserver = source.Contains(BaseUrl.Split("//")[1]);
             if (source == null)
             {
                 source = (string)element["source"];
@@ -310,22 +315,38 @@ namespace DashboardAPI.Controllers
                  source + '"' +
                " style='max-width: 700px; margin-right: auto; margin-left: auto; '>";
             }
-            return
+            if (isonserver)
+            {
+                return
                 "<img src=" + '"' +
                  BaseUrl + source + '"' +
                 " style='max-width: 700px; margin-right: auto; margin-left: auto; '>";
+            }
+            else
+            {
+                return
+                "<img src=" + '"' +
+                 source + '"' +
+                " style='max-width: 700px; margin-right: auto; margin-left: auto; '>";
+            }
+            
         }
 
-        private static string parse_Video(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload)
+        private static string parse_Video(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload, string BaseUrl)
         {
-            string source = (string)element["source"];
-            string placeholderSource = (string)element["placeholderSource"];
+            
+            return
+               "<img src='" +
+                BaseUrl + "assets/img/Video_player_image.png'" +
+               " style='max-width: 700px; margin-right: auto; margin-left: auto; '>";
 
-            return "<video controls='' " +
-                "poster=" + placeholderSource + //"'' " + 
-                "src=" + source + //"'https://www.youtube.com/watch?v=uRCJeK9MZ6c'" + 
-                " style='max-width: 700px; margin-right: auto; margin-left: auto; '></video>";
-            return "<img style='max-width: 700px; margin-right: auto; margin-left: auto; ' src='https://www.youtube.com/watch?v=uRCJeK9MZ6c'>";
+            //string source = (string)element["source"];
+            //string placeholderSource = (string)element["placeholderSource"];
+
+            //return "<video controls='' " +
+            //    "poster='" + placeholderSource +
+            //    "' src='" + source +
+            //    "' style='max-width: 700px; margin-right: auto; margin-left: auto; '></video>";
         }
 
         private static string parse_TextInput(Newtonsoft.Json.Linq.JObject element, Newtonsoft.Json.Linq.JObject payload)
